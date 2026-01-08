@@ -4,6 +4,8 @@
 
 A lightweight yet powerful video file scanner with a beautiful CLI interface. Quickly find and catalog all video files in any directory with format-specific filtering, detailed statistics, and export capabilities. Fully bilingual (English/Chinese).
 
+<img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Video-Converter/total.svg?label=Downloads" alt="Downloads" />
+
 ### ✨ Features
 
 - **Universal Format Support**: Scan for 18+ video formats including `.mp4`, `.mov`, `.mkv`, `.ts`, `.mts`, `.m2ts`, `.avi`, `.wmv`, `.flv`, `.webm`, `.m4v`, `.mpg`, `.mpeg`, `.3gp`, `.f4v`, `.vob`, `.rmvb`, `.rm`
@@ -203,3 +205,4 @@ GNU GPL v3.0
 ### 👤 作者
 
 Jack Ji
+
