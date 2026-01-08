@@ -2,6 +2,10 @@
 
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
+**Language / 语言**: [English](#english) | [中文](#中文)
+
+---
+
 ## English
 
 A lightweight yet powerful video file scanner with a beautiful CLI interface. Quickly find and catalog all video files in any directory with format-specific filtering, detailed statistics, and export capabilities. Fully bilingual (English/Chinese).
@@ -105,6 +109,8 @@ GNU GPL v3.0
 Jack Ji
 
 ---
+
+## 中文
 
 # 🔍 极速视频扫描工具
 
