@@ -20,7 +20,6 @@ A lightweight yet powerful video file scanner with a beautiful CLI interface. Qu
 - **Detailed File List**: Complete paths organized by format type
 - **Export Results**: Save scan results to a text file for later reference
 - **Bilingual UI**: Full English and Chinese language support
-- **Beautiful Interface**: Modern CLI design with colors, icons, and ASCII art banner
 
 ### 🔧 System Requirements
 
@@ -125,7 +124,6 @@ Jack Ji
 - **详细文件列表**: 按格式类型整理的完整文件路径
 - **导出结果**: 将扫描结果保存到文本文件以便日后查阅
 - **双语界面**: 完整的中英文语言支持
-- **精美界面**: 现代CLI设计，配有颜色、图标和ASCII艺术横幅
 
 ### 🔧 环境要求
 
@@ -212,6 +210,7 @@ GNU GPL v3.0
 ### 👤 作者
 
 Jack Ji
+
 
 
 
