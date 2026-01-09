@@ -8,7 +8,7 @@
 
 ## English
 
-A modern, beautiful, and cross-platform video file scanner. Now featuring a stunning dark-themed GUI built with **Flet** and rock-solid file handling via **Tkinter**. Quickly find, organize, and analyze video files in any directory.
+A modern, beautiful, and powerful video file scanner. Now featuring a stunning dark-themed GUI built with **Flet** and rock-solid file handling via **Tkinter**. Quickly find, organize, and analyze video files in any directory.
 
 <img width="1983" height="1657" alt="image" src="https://github.com/user-attachments/assets/f1fea3f2-73b2-4a3f-b0b6-afda9fce8bab" />
 
@@ -80,7 +80,7 @@ Jack Ji
 
 # 🔍 史诗级视频扫描器
 
-一款现代、美观且跨平台的视频文件扫描工具。新版本采用 **Flet** 构建了精美的暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
+一款现代、美观且强大的视频文件扫描工具。新版本采用 **Flet** 构建了精美的暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
 
 <img width="1984" height="1658" alt="image" src="https://github.com/user-attachments/assets/ead325e2-7e41-419a-998c-a0da7d00574b" />
 
@@ -144,6 +144,7 @@ GNU GPL v3.0
 
 ### 👤 作者
 Jack Ji
+
 
 
 
