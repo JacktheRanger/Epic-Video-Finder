@@ -81,7 +81,7 @@ Jack Ji
 
 # 🔍 史诗级视频扫描器
 
-一款现代、美观且强大的视频文件扫描工具。新版本采用 **Flet** 构建了精美的亮色与暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
+一款现代、美观且功能强大的视频文件扫描工具。新版本采用 **Flet** 构建了精美的亮色与暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
 
 <img width="1986" height="1598" alt="image" src="https://github.com/user-attachments/assets/de65f29e-dd8b-4a1b-921c-58ad69ddd630" />
 
@@ -150,6 +150,7 @@ Jack Ji
 ---
 
 [Back to Top](#top)
+
 
 
 
