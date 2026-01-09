@@ -31,7 +31,7 @@ A modern, beautiful, and cross-platform video file scanner. Now featuring a stun
 
 #### Option A: Download EXE (Recommended)
 1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases)
-2. Download `V2.0.0.Epic.Video.Finder.exe`
+2. Download `Vx.x.x.Epic.Video.Finder.exe`
 3. Double-click to run. No installation required.
 
 #### Option B: Run from Source
@@ -42,7 +42,7 @@ A modern, beautiful, and cross-platform video file scanner. Now featuring a stun
    ```
 3. Run the script:
    ```bash
-   python V2.0.0.Epic.Video.Finder.py
+   python Vx.x.x.Epic.Video.Finder.py
    ```
 
 ### 📖 Usage
@@ -77,7 +77,7 @@ Jack Ji
 
 # 🔍 史诗级视频扫描器
 
-一款现代、美观且跨平台的视频文件扫描工具。全新 V2.0.0 版本采用 **Flet** 构建了精美的暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
+一款现代、美观且跨平台的视频文件扫描工具。新版本采用 **Flet** 构建了精美的暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
 <img width="1998" height="1659" alt="image" src="https://github.com/user-attachments/assets/60a0d1d7-536d-4692-9d4c-d3cbd08fca1c" />
 
 
@@ -100,7 +100,7 @@ Jack Ji
 
 #### 方式 A：下载 EXE（推荐）
 1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) 页面。
-2. 下载 `V2.0.0.Epic.Video.Finder.exe`。
+2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
 3. 双击直接运行，无需安装任何环境。
 
 #### 方式 B：源码运行
@@ -111,7 +111,7 @@ Jack Ji
    ```
 3. 运行脚本：
    ```bash
-   python V2.0.0.Epic.Video.Finder.py
+   python Vx.x.x.Epic.Video.Finder.py
    ```
 
 ### 📖 使用说明
@@ -139,5 +139,6 @@ GNU GPL v3.0
 
 ### 👤 作者
 Jack Ji
+
 
 
