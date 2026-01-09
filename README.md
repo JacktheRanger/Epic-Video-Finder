@@ -1,7 +1,5 @@
-<a id="top"></a>
-
 # 🔍 Epic Video Scanner
-
+<a id="top"></a>
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
 **Language**: [English](#english) | [中文](#中文)
@@ -150,6 +148,7 @@ Jack Ji
 ---
 
 [⬆️ 回到顶端 / Back to Top](#top)
+
 
 
 
