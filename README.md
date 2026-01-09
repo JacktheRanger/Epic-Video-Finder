@@ -1,4 +1,4 @@
-# 🔍 Epic Video Scanner (GUI Edition)
+# 🔍 Epic Video Scanner
 
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
@@ -73,7 +73,7 @@ Jack Ji
 
 ## 中文
 
-# 🔍 Epic 视频扫描器 (GUI 版)
+# 🔍 史诗级视频扫描器
 
 一款现代、美观且跨平台的视频文件扫描工具。全新 V2.0.0 版本采用 **Flet** 构建了精美的暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
 
@@ -135,3 +135,4 @@ GNU GPL v3.0
 
 ### 👤 作者
 Jack Ji
+
