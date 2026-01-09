@@ -1,4 +1,4 @@
-# 🔍 Epic Video Scanner
+# 🔍 Epic Video Scanner (GUI Edition)
 
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
@@ -8,207 +8,130 @@
 
 ## English
 
-A lightweight yet powerful video file scanner with a beautiful CLI interface. Quickly find and catalog all video files in any directory with format-specific filtering, detailed statistics, and export capabilities. Fully bilingual (English/Chinese).
-
+A modern, beautiful, and cross-platform video file scanner. Now featuring a stunning dark-themed GUI built with **Flet** and rock-solid file handling via **Tkinter**. Quickly find, organize, and analyze video files in any directory.
 
 ### ✨ Features
 
-- **Universal Format Support**: Scan for 18+ video formats including `.mp4`, `.mov`, `.mkv`, `.ts`, `.mts`, `.m2ts`, `.avi`, `.wmv`, `.flv`, `.webm`, `.m4v`, `.mpg`, `.mpeg`, `.3gp`, `.f4v`, `.vob`, `.rmvb`, `.rm`
-- **Format Filtering**: Interactive per-format selection - choose exactly which formats to scan or ignore
-- **Deep Scanning**: Recursively scans all subdirectories to find every video file
-- **Format Statistics**: Visual bar charts showing file count per format
-- **Detailed File List**: Complete paths organized by format type
-- **Export Results**: Save scan results to a text file for later reference
-- **Bilingual UI**: Full English and Chinese language support
+- **🎨 Modern GUI**: Beautiful dark-themed interface with Material Design aesthetics.
+- **📁 Native Dialogs**: Uses Windows native directory and file pickers (via Tkinter) for 100% reliability.
+- **🔄 Deep Scanning**: Recursively finds 18+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
+- **📊 Visual Statistics**: Real-time progress ring and scanning result bar charts.
+- **☑️ Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
+- **🌍 Bilingual**: One-click toggle between **English** and **Chinese** interface.
+- **💾 Export**: Save your scan results to a text file for reporting.
 
 ### 🔧 System Requirements
 
 - **OS**: Windows 10/11 (64-bit)
+- **Python**: 3.7+ (Only if running from source)
 
 ### 🚀 Installation
 
-#### Option A: Download EXE (Recommended - Easiest)
+#### Option A: Download EXE (Recommended)
+1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases)
+2. Download `V2.0.0.Epic.Video.Finder.exe`
+3. Double-click to run. No installation required.
 
-1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) page
-2. Download `Vx.x.x.Epic.Video.Finder.exe`
-3. That's it! No Python required.
-
-#### Option B: Run from Source (For developers)
-
-1. **Install Python (3.8+, recommended 3.12)**
-   - Download from: [https://www.python.org/downloads/](https://www.python.org/downloads/)
-   - No additional pip packages required - uses only built-in modules
-
-2. **Download the script**
-   - Clone or download `Vx.x.x.Epic.Video.Finder.py`
+#### Option B: Run from Source
+1. Install Python 3.7+
+2. Install dependencies:
+   ```bash
+   pip install flet
+   ```
+3. Run the script:
+   ```bash
+   python V2.0.0.Epic.Video.Finder.py
+   ```
 
 ### 📖 Usage
 
-#### Using EXE Version
-
-1. Place `Vx.x.x.Epic.Video.Finder.exe` anywhere on your system
-2. Double-click the EXE to run
-3. Select language (English/Chinese)
-4. Enter the directory path to scan (or press Enter for current directory)
-5. Select which formats to scan
-6. View results and optionally save to file
-
-#### Using Python Script
-
-1. Double-click the script or run from terminal:
-   ```
-   python "Vx.x.x.Epic.Video.Finder.py"
-   ```
-2. Select language and follow prompts
-
-#### Workflow
-
-```
-┌─────────────────────────────────────────────────────┐
-│ 1. Banner → Select Language                        │
-│ 2. Directory Setup → Enter path or use current     │
-│ 3. Format Selection → Choose formats to scan       │
-│ 4. Deep Scan → Recursively find all video files    │
-│ 5. Results → Format statistics with visual bars    │
-│ 6. File List → Detailed paths organized by format  │
-│ 7. Export → Optionally save results to text file   │
-└─────────────────────────────────────────────────────┘
-```
+1. **Select Directory**: Click "Browse" to choose the folder you want to scan.
+2. **Choose Formats**: Check/Uncheck video formats you want to include (or use "Select All").
+3. **Start Scan**: Click the big search button. The app will scan in the background.
+4. **View Results**: See the file count, format distribution, and scrollable file list.
+5. **Save**: Click "Save Results" to export the list to a `.txt` file.
 
 ### 📋 Supported Formats
 
-| Priority Formats | Other Formats |
-|-----------------|---------------|
-| `.mp4` | `.wmv` |
-| `.mov` | `.flv` |
-| `.mkv` | `.webm` |
-| `.ts` | `.m4v` |
-| `.mts` | `.mpg` |
-| `.m2ts` | `.mpeg` |
-| `.avi` | `.3gp` |
-|  | `.f4v` |
-|  | `.vob` |
-|  | `.rmvb` |
-|  | `.rm` |
+| Priority | Others |
+|----------|--------|
+| `.mp4` `.mov` `.mkv` | `.wmv` `.flv` `.webm` |
+| `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
+| `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
 ### ⚠️ Notes
-
-- The scanner only reads file metadata - it does not modify or move any files
-- Results are sorted by format with the most common formats shown first
-- Permission errors are gracefully handled with informative messages
+- Does not modify your files (read-only scan).
+- Uses System Native Dialogs (via Tkinter) for maximum compatibility on Windows.
 
 ### 📄 License
-
 GNU GPL v3.0
 
 ### 👤 Author
-
 Jack Ji
 
 ---
 
 ## 中文
 
-# 🔍 史诗级视频扫描工具
+# 🔍 Epic 视频扫描器 (GUI 版)
 
-一款轻量但功能强大的视频文件扫描工具，配备精美的命令行界面。可以快速查找并整理任意目录中的所有视频文件，支持格式筛选、详细统计和结果导出。配备全双语界面（中/英）。
+一款现代、美观且跨平台的视频文件扫描工具。全新 V2.0.0 版本采用 **Flet** 构建了精美的暗色主题图形界面，并结合 **Tkinter** 实现原生系统的文件交互。
 
-### ✨ 功能特点
+### ✨ 主要功能 
 
-- **通用格式支持**: 扫描 18+ 种视频格式，包括 `.mp4`、`.mov`、`.mkv`、`.ts`、`.mts`、`.m2ts`、`.avi`、`.wmv`、`.flv`、`.webm`、`.m4v`、`.mpg`、`.mpeg`、`.3gp`、`.f4v`、`.vob`、`.rmvb`、`.rm`
-- **格式筛选**: 交互式逐格式选择 - 精确选择要扫描或忽略的格式
-- **深度扫描**: 递归扫描所有子目录，查找每个视频文件
-- **格式统计**: 可视化柱状图显示每种格式的文件数量
-- **详细文件列表**: 按格式类型整理的完整文件路径
-- **导出结果**: 将扫描结果保存到文本文件以便日后查阅
-- **双语界面**: 完整的中英文语言支持
+- **🎨 现代化界面**: 极具质感的暗色主题 (Dark Mode) 与 Material Design 设计。
+- **📁 原生体验**: 集成 Windows 原生文件/目录选择框 (Tkinter 引擎)，稳定可靠。
+- **🔄 深度扫描**: 递归查找子目录中 18+ 种常见及罕见的视频格式。
+- **📊 可视化统计**: 实时扫描进度环，以及扫描结果的格式分布柱状图。
+- **☑️ 灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
+- **🌍 双语支持**: 界面内置中/英文一键切换。
+- **💾 结果导出**: 支持将扫描到的文件列表和统计信息导出为文本文件。
 
 ### 🔧 环境要求
 
-- **操作系统**: Windows 10/11 (64位)
+- **系统**: Windows 10/11 (64位)
+- **Python**: 3.7+ (仅源码运行需要)
 
-### 🚀 安装步骤
+### 🚀 安装与运行
 
-#### 方式 A：下载 EXE（推荐 - 最简单）
+#### 方式 A：下载 EXE（推荐）
+1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) 页面。
+2. 下载 `V2.0.0.Epic.Video.Finder.exe`。
+3. 双击直接运行，无需安装任何环境。
 
-1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) 页面
-2. 下载 `Vx.x.x.Epic.Video.Finder.exe`
-3. 完成！无需安装 Python。
-
-#### 方式 B：运行源代码（适合开发者）
-
-1. **安装 Python（3.8+，推荐 3.12）**
-   - 下载地址：[https://www.python.org/downloads/](https://www.python.org/downloads/)
-   - 无需安装额外的 pip 包 - 仅使用内置模块
-
-2. **下载脚本**
-   - 克隆或下载 `Vx.x.x.Epic.Video.Finder.py`
-
-### 📖 使用方法
-
-#### 使用 EXE 版本
-
-1. 将 `Vx.x.x.Epic.Video.Finder.exe` 放置在系统任意位置
-2. 双击 EXE 运行
-3. 选择语言（中文/英文）
-4. 输入要扫描的目录路径（或按回车使用当前目录）
-5. 选择要扫描的格式
-6. 查看结果并可选保存到文件
-
-#### 使用 Python 脚本
-
-1. 双击脚本或从终端执行：
+#### 方式 B：源码运行
+1. 确保安装了 Python 3.7+。
+2. 安装依赖库：
+   ```bash
+   pip install flet
    ```
-   python "Vx.x.x.Epic.Video.Finder.py"
+3. 运行脚本：
+   ```bash
+   python V2.0.0.Epic.Video.Finder.py
    ```
-2. 选择语言并按提示操作
 
-#### 工作流程
+### 📖 使用说明
 
-```
-┌─────────────────────────────────────────────────────┐
-│ 1. 横幅 → 选择语言                                   │
-│ 2. 目录设置 → 输入路径或使用当前目录                    │
-│ 3. 格式选择 → 选择要扫描的格式                         │
-│ 4. 深度扫描 → 递归查找所有视频文件                      │
-│ 5. 结果 → 带可视化柱状图的格式统计                      │
-│ 6. 文件列表 → 按格式整理的详细路径                      │
-│ 7. 导出 → 可选将结果保存到文本文件                      │
-└─────────────────────────────────────────────────────┘
-```
+1. **选择目录**: 点击 "浏览 (Browse)" 按钮选择要扫描的文件夹。
+2. **格式筛选**: 勾选你想要查找的视频格式（支持快捷全选/反选）。
+3. **开始扫描**: 点击搜索图标按钮，扫描将在后台即时进行。
+4. **查看结果**: 扫描完成后展示文件总数、格式统计图表和详细文件列表。
+5. **保存结果**: 点击 "保存结果 (Save Results)" 将列表导出为 `.txt` 文件。
 
-### 📋 支持的格式
+### 📋 支持格式
 
-| 优先格式 | 其他格式 |
-|---------|---------|
-| `.mp4` | `.wmv` |
-| `.mov` | `.flv` |
-| `.mkv` | `.webm` |
-| `.ts` | `.m4v` |
-| `.mts` | `.mpg` |
-| `.m2ts` | `.mpeg` |
-| `.avi` | `.3gp` |
-|  | `.f4v` |
-|  | `.vob` |
-|  | `.rmvb` |
-|  | `.rm` |
+| 常用格式 | 其他格式 |
+|----------|--------|
+| `.mp4` `.mov` `.mkv` | `.wmv` `.flv` `.webm` |
+| `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
+| `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
 ### ⚠️ 注意事项
-
-- 扫描器只读取文件元数据 - 不会修改或移动任何文件
-- 结果按格式排序，最常见的格式显示在前面
-- 权限错误会被优雅处理并显示信息性消息
+- 本工具为**只读扫描**，绝对不会修改或移动您的任何文件。
+- 只有在点击 "浏览" 按钮时会调用极其稳定的系统原生对话框。
 
 ### 📄 许可证
-
 GNU GPL v3.0
 
 ### 👤 作者
-
 Jack Ji
-
-
-
-
-
-
