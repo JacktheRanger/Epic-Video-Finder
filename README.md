@@ -24,8 +24,6 @@ A lightweight yet powerful video file scanner with a beautiful CLI interface. Qu
 ### 🔧 System Requirements
 
 - **OS**: Windows 10/11 (64-bit)
-- **Python**: 3.8+ (3.12 recommended)
-- **Dependencies**: None - uses only built-in Python modules
 
 ### 🚀 Installation
 
@@ -128,8 +126,6 @@ Jack Ji
 ### 🔧 环境要求
 
 - **操作系统**: Windows 10/11 (64位)
-- **Python**: 3.8+（推荐 3.12）
-- **依赖**: 无 - 仅使用 Python 内置模块
 
 ### 🚀 安装步骤
 
@@ -210,6 +206,7 @@ GNU GPL v3.0
 ### 👤 作者
 
 Jack Ji
+
 
 
 
