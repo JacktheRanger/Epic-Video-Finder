@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 # 🔍 Epic Video Scanner
 
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
@@ -144,6 +146,10 @@ GNU GPL v3.0
 
 ### 👤 作者
 Jack Ji
+
+---
+
+[⬆️ 回到顶端 / Back to Top](#top)
 
 
 
