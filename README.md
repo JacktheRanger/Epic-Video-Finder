@@ -42,7 +42,7 @@ A modern, beautiful, and powerful video file scanner. Now featuring a stunning b
 2. Download `Vx.x.x.Epic.Video.Finder.exe`
 3. Double-click to run. No installation required.
 
-#### Option B: Run from Source
+#### Option B: Run from Source (For Developers)
 1. Install Python 3.7+
 2. Install dependencies:
    ```bash
@@ -119,7 +119,7 @@ Jack Ji
 2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
 3. 双击直接运行，无需安装任何环境。
 
-#### 方式 B：源码运行
+#### 方式 B：源码运行（开发者专用）
 1. 确保安装了 Python 3.7+。
 2. 安装依赖库：
    ```bash
@@ -158,6 +158,7 @@ Jack Ji
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
