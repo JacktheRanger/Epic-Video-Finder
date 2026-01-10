@@ -1,4 +1,4 @@
-# 🔍 Epic Video Scanner and Duplicate Finder
+# 🔍 Epic Video Finder
 <a id="top"></a>
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
@@ -166,6 +166,7 @@ Jack Ji
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
