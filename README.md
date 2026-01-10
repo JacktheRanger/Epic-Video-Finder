@@ -25,7 +25,10 @@ A modern, beautiful, and powerful video file scanner. Now featuring a stunning b
 - **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design aesthetics.
 - **📁 Native Dialogs**: Uses Windows native directory and file pickers (via Tkinter) for 100% reliability.
 - **🔄 Deep Scanning**: Recursively finds 18+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
-- **📊 Visual Statistics**: Real-time progress ring and scanning result bar charts.
+- **📊 Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
+- **🔍 Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
+  - **Very Fast Mode**: Instant detection by file size comparison.
+  - **Balance Mode**: Accurate detection using SHA-256 hash verification.
 - **☑️ Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
 - **🌍 Bilingual**: One-click toggle between **English** and **Chinese** interface.
 - **💾 Export**: Save your scan results to a text file for reporting.
@@ -57,9 +60,10 @@ A modern, beautiful, and powerful video file scanner. Now featuring a stunning b
 
 1. **Select Directory**: Click "Browse" to choose the folder you want to scan.
 2. **Choose Formats**: Check/Uncheck video formats you want to include (or use "Select All").
-3. **Start Scan**: Click the big search button. The app will scan in the background.
-4. **View Results**: See the file count, format distribution, and scrollable file list.
-5. **Save**: Click "Save Results" to export the list to a `.txt` file.
+3. **Start Scan**: Click the big search button. The app will scan in the background with real-time progress.
+4. **View Results**: See the file count, file sizes, format distribution, and scrollable file list.
+5. **Detect Duplicates**: Use "Detect Duplicates" to find and delete duplicate video files.
+6. **Save**: Click "Save Results" to export the list to a `.txt` file.
 
 ### 📋 Supported Formats
 
@@ -102,7 +106,10 @@ Jack Ji
 - **🎨 现代化界面**: 极具质感的色彩主题与 Material Design 设计。
 - **📁 原生体验**: 集成 Windows 原生文件/目录选择框 (Tkinter 引擎)，稳定可靠。
 - **🔄 深度扫描**: 递归查找子目录中 18+ 种常见及罕见的视频格式。
-- **📊 可视化统计**: 实时扫描进度环，以及扫描结果的格式分布柱状图。
+- **📊 可视化统计**: 实时扫描进度条，扫描结果格式分布柱状图，显示文件大小。
+- **🔍 重复文件检测**: 识别并管理重复的视频文件，提供两种检测模式：
+  - **极速模式**: 通过文件大小瞬间对比检测。
+  - **均衡模式**: 使用 SHA-256 哈希校验精准检测。
 - **☑️ 灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
 - **🌍 双语支持**: 界面内置中/英文一键切换。
 - **💾 结果导出**: 支持将扫描到的文件列表和统计信息导出为文本文件。
@@ -134,9 +141,10 @@ Jack Ji
 
 1. **选择目录**: 点击 "浏览 (Browse)" 按钮选择要扫描的文件夹。
 2. **格式筛选**: 勾选你想要查找的视频格式（支持快捷全选/反选）。
-3. **开始扫描**: 点击搜索图标按钮，扫描将在后台即时进行。
-4. **查看结果**: 扫描完成后展示文件总数、格式统计图表和详细文件列表。
-5. **保存结果**: 点击 "保存结果 (Save Results)" 将列表导出为 `.txt` 文件。
+3. **开始扫描**: 点击搜索图标按钮，扫描将在后台即时进行，实时显示进度。
+4. **查看结果**: 扫描完成后展示文件总数、文件大小、格式统计图表和详细文件列表。
+5. **检测重复**: 使用 "检测重复" 功能查找并删除重复的视频文件。
+6. **保存结果**: 点击 "保存结果 (Save Results)" 将列表导出为 `.txt` 文件。
 
 ### 📋 支持格式
 
