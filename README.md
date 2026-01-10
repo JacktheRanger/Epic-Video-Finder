@@ -20,7 +20,7 @@ A modern, beautiful, and powerful video file scanner. Now featuring a stunning b
 
 ### ✨ Features
 
-- **🎨 Modern GUI**: Beautiful light-themed interface with Material Design aesthetics.
+- **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design aesthetics.
 - **📁 Native Dialogs**: Uses Windows native directory and file pickers (via Tkinter) for 100% reliability.
 - **🔄 Deep Scanning**: Recursively finds 18+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
 - **📊 Visual Statistics**: Real-time progress ring and scanning result bar charts.
@@ -95,7 +95,7 @@ Jack Ji
 
 ### ✨ 主要功能 
 
-- **🎨 现代化界面**: 极具质感的亮色主题 (Light Mode) 与 Material Design 设计。
+- **🎨 现代化界面**: 极具质感的色彩主题与 Material Design 设计。
 - **📁 原生体验**: 集成 Windows 原生文件/目录选择框 (Tkinter 引擎)，稳定可靠。
 - **🔄 深度扫描**: 递归查找子目录中 18+ 种常见及罕见的视频格式。
 - **📊 可视化统计**: 实时扫描进度环，以及扫描结果的格式分布柱状图。
@@ -154,6 +154,7 @@ Jack Ji
 ---
 
 [Back to Top](#top)
+
 
 
 
