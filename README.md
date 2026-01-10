@@ -8,7 +8,7 @@
 
 ## English
 
-A modern, beautiful, and powerful video file scanner and duplicate finder. Now featuring a stunning bright and dark-themed GUI built with **Flet** and rock-solid file handling via **Tkinter**. Quickly find, organize, analyze, and deduplicate video files in any directory.
+A modern, beautiful, and powerful video **file scanner** and **duplicate finder**. Now featuring a stunning bright and dark-themed GUI built with **Flet** and rock-solid file handling via **Tkinter**. Quickly find, organize, analyze, and deduplicate video files in any directory.
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
