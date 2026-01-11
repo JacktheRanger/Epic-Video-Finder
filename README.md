@@ -40,7 +40,7 @@ A modern, beautiful, and powerful video **file scanner** and **duplicate finder*
 - **OS**: Windows 10/11 (64-bit)
 - **Python**: 3.7+ (Only if running from source)
 
-### 🚀 Installation
+### 🚀 How to Use
 
 1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases)
 2. Download `Vx.x.x.Epic.Video.Finder.exe`
@@ -112,7 +112,7 @@ Jack Ji
 - **系统**: Windows 10/11 (64位)
 - **Python**: 3.7+ (仅源码运行需要)
 
-### 🚀 安装与运行
+### 🚀 如何使用
 
 1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) 页面。
 2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
@@ -149,6 +149,7 @@ Jack Ji
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
