@@ -131,7 +131,13 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 GNU GPL v3.0
 
 ### 👤 作者
-Jack Ji &nbsp;&nbsp; [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jackji)
+Jack Ji &nbsp;&nbsp;
+<a href="https://buymeacoffee.com/jackji">
+  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" 
+       alt="Buy Me A Coffee" 
+       style="vertical-align:middle;">
+</a>
+
 
 
 
@@ -140,6 +146,7 @@ Jack Ji &nbsp;&nbsp; [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%2
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
