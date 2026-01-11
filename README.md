@@ -62,7 +62,7 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
 
 
 ### 📄 License
-GNU GPL v3.0
+GNU AGPL-3.0
 
 ### 👤 Author
 Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jackji)
@@ -128,7 +128,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 | `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
 ### 📄 许可证
-GNU GPL v3.0
+GNU AGPL-3.0
 
 ### 👤 作者
 Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jackji)
@@ -143,6 +143,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
