@@ -19,9 +19,6 @@ A modern, beautiful, and powerful video **file scanner** and **duplicate finder*
 
 
 
-
-
-
 ### ✨ Features
 
 - **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design aesthetics.
@@ -46,8 +43,6 @@ A modern, beautiful, and powerful video **file scanner** and **duplicate finder*
 2. Download `Vx.x.x.Epic.Video.Finder.exe`
 3. Double-click to run. No installation required.
 
-
-
 ### 📖 Usage
 
 1. **Select Directory**: Click "Browse" to choose the folder you want to scan.
@@ -65,9 +60,6 @@ A modern, beautiful, and powerful video **file scanner** and **duplicate finder*
 | `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
 | `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
-### ⚠️ Notes
-- Does not modify your files (read-only scan).
-- Uses System Native Dialogs (via Tkinter) for maximum compatibility on Windows.
 
 ### 📄 License
 GNU GPL v3.0
@@ -118,8 +110,6 @@ Jack Ji
 2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
 3. 双击直接运行，无需安装任何环境。
 
-
-
 ### 📖 使用说明
 
 1. **选择目录**: 点击 "浏览 (Browse)" 按钮选择要扫描的文件夹。
@@ -137,9 +127,6 @@ Jack Ji
 | `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
 | `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
-### ⚠️ 注意事项
-- 本工具为**只读扫描**，绝对不会修改或移动您的任何文件。
-
 ### 📄 许可证
 GNU GPL v3.0
 
@@ -149,6 +136,7 @@ Jack Ji
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
