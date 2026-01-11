@@ -42,21 +42,11 @@ A modern, beautiful, and powerful video **file scanner** and **duplicate finder*
 
 ### 🚀 Installation
 
-#### Option A: Download EXE (Recommended)
 1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases)
 2. Download `Vx.x.x.Epic.Video.Finder.exe`
 3. Double-click to run. No installation required.
 
-#### Option B: Run from Source (For Developers)
-1. Install Python 3.7+
-2. Install dependencies:
-   ```bash
-   pip install flet
-   ```
-3. Run the script:
-   ```bash
-   python Vx.x.x.Epic.Video.Finder.py
-   ```
+
 
 ### 📖 Usage
 
@@ -124,21 +114,11 @@ Jack Ji
 
 ### 🚀 安装与运行
 
-#### 方式 A：下载 EXE（推荐）
 1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) 页面。
 2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
 3. 双击直接运行，无需安装任何环境。
 
-#### 方式 B：源码运行（开发者专用）
-1. 确保安装了 Python 3.7+。
-2. 安装依赖库：
-   ```bash
-   pip install flet
-   ```
-3. 运行脚本：
-   ```bash
-   python Vx.x.x.Epic.Video.Finder.py
-   ```
+
 
 ### 📖 使用说明
 
@@ -169,6 +149,7 @@ Jack Ji
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
