@@ -12,8 +12,8 @@ A modern, beautiful, and powerful video **file scanner** and **duplicate finder*
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
-<img width="2045" height="1603" alt="image" src="https://github.com/user-attachments/assets/9e3c9b3f-9337-45b0-a412-948500c8b681" />
-<img width="2045" height="1603" alt="image" src="https://github.com/user-attachments/assets/2998e696-1a63-4ccf-a9d2-1cc8400a7ab3" />
+<img width="2044" height="1597" alt="image" src="https://github.com/user-attachments/assets/7e580866-f167-4915-8211-b1666a1b5453" />
+
 
 
 
@@ -169,6 +169,7 @@ Jack Ji
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
