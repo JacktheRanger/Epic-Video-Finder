@@ -34,7 +34,7 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
   - **Balance Mode**: Accurate detection using SHA-256 hash verification.
 - **☑️ Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
 - **🧩 Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
-- **⏱️ Include Duration (Optional)**: Toggle **Include Duration** to show video length (uses Windows Shell metadata; may slow down scanning).
+- **⏱️ Include Duration (Optional)**: Toggle **Include Duration** to show video length (uses Windows Shell metadata; will slow down scanning).
 - **🗂️ Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
 - **📌 Always on Top**: Keep the window above other apps while reviewing results.
 - **🗑️ Safe Deletion**: Deletes are sent to the **Recycle Bin** (including duplicate deletion and cache clearing).
@@ -120,7 +120,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
   - **均衡模式**: 使用 SHA-256 哈希校验精准检测。
 - **☑️ 灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
 - **🧩 自定义格式**: 支持输入你自己的扩展名（逗号分隔，例如 `.mxf, .m2v`），并可通过勾选框启用/禁用。
-- **⏱️ 包含视频长度（可选）**: 开启 **包含视频长度** 后会显示视频时长（使用 Windows Shell 元数据；可能会降低扫描速度）。
+- **⏱️ 包含视频长度（可选）**: 开启 **包含视频长度** 后会显示视频时长（使用 Windows Shell 元数据；会降低扫描速度）。
 - **🗂️ 快捷操作**: 在结果列表中可直接 **打开视频**、**打开所在文件夹**、或 **删除文件**。
 - **📌 窗口置顶**: 需要时可开启置顶，方便边查看结果边操作其它窗口。
 - **🗑️ 安全删除**: 删除操作会发送到 **回收站**（包含重复删除与清缓存）。
@@ -179,6 +179,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
