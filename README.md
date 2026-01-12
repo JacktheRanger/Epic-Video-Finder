@@ -8,7 +8,7 @@
 
 ## English
 
-A modern, beautiful, and powerful video **file** and **duplicate finder**. Now featuring a stunning bright and dark-themed GUI built with Flet and rock-solid file handling via Tkinter. Quickly find, organize, analyze, and deduplicate video files in any directory.
+A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. Now featuring a stunning bright and dark-themed GUI built with Flet and rock-solid file handling via Tkinter. Quickly find, organize, analyze, and deduplicate video files in any directory.
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
@@ -90,7 +90,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 # 🔍 史诗级视频扫描 & 重复文件检测器
 
-一款现代、美观且功能强大的视频**文件**与**重复检测工具**。新版本采用Flet构建了精美的亮色与暗色主题图形界面，并结合Tkinter实现原生系统的文件交互。
+一款现代、美观且功能强大的SOTA视频**文件**与**重复检测工具**。新版本采用Flet构建了精美的亮色与暗色主题图形界面，并结合Tkinter实现原生系统的文件交互。
 
 > ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
 
@@ -179,6 +179,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
