@@ -32,6 +32,12 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
   - **Very Fast Mode**: Instant detection by file size comparison.
   - **Balance Mode**: Accurate detection using SHA-256 hash verification.
 - **☑️ Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
+- **🧩 Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
+- **⏱️ Include Duration (Optional)**: Toggle **Include Duration** to show video length (uses Windows Shell metadata; may slow down scanning).
+- **🗂️ Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
+- **📌 Always on Top**: Keep the window above other apps while reviewing results.
+- **🗑️ Safe Deletion**: Deletes are sent to the **Recycle Bin** (including duplicate deletion and cache clearing).
+- **⚙️ Settings & Cache**: Remember theme/language/formats/window state, display cache size, and clear cache to reset.
 - **🌍 Bilingual**: One-click toggle between **English** and **Chinese** interface.
 - **💾 Export**: Save your scan results to a text file for reporting.
 
@@ -42,18 +48,25 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
 
 ### 🚀 How to Use
 
-1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases)
+1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Finder/releases)
 2. Download `Vx.x.x.Epic.Video.Finder.exe`
 3. Double-click to run. No installation required.
 
 ### 📖 Usage
 
 1. **Select Directory**: Click "Browse" to choose the folder you want to scan.
-2. **Choose Formats**: Check/Uncheck video formats you want to include (or use "Select All").
-3. **Start Scan**: Click the big search button. The app will scan in the background with real-time progress.
-4. **View Results**: See the file count, file sizes, format distribution, and scrollable file list.
-5. **Detect Duplicates**: Use "Detect Duplicates" to find and delete duplicate video files.
-6. **Save**: Click "Save Results" to export the list to a `.txt` file.
+2. **Choose Formats**: Check/Uncheck video formats you want to include (or use "Select All"). Optionally add **Custom formats** (comma separated).
+3. **(Optional) Include Duration**: Turn on **Include Duration** if you want to display video length in results.
+4. **Start Scan**: Click the big search button. The app will scan in the background with real-time progress.
+5. **View & Manage Results**: See counts/sizes, format distribution, and use the action buttons to **open**, **open folder**, or **delete** (Recycle Bin). Toggle **Always on Top** if needed.
+6. **Detect Duplicates**: Choose a mode, run detection, then delete selected duplicates (Recycle Bin).
+7. **Save**: Click "Save Results" to export the list to a `.txt` file.
+
+### ⚙️ Settings & Cache
+
+- Settings and cache are stored under `%APPDATA%\EpicVideoScanner` (e.g. `settings.json`).
+- Turn off **Remember my settings** if you don't want the app to persist settings between launches.
+- Use **Clear Cache** to reset saved settings (items are sent to the Recycle Bin).
 
 ### 📋 Supported Formats
 
@@ -102,6 +115,12 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
   - **极速模式**: 通过文件大小瞬间对比检测。
   - **均衡模式**: 使用 SHA-256 哈希校验精准检测。
 - **☑️ 灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
+- **🧩 自定义格式**: 支持输入你自己的扩展名（逗号分隔，例如 `.mxf, .m2v`），并可通过勾选框启用/禁用。
+- **⏱️ 包含视频长度（可选）**: 开启 **包含视频长度** 后会显示视频时长（使用 Windows Shell 元数据；可能会降低扫描速度）。
+- **🗂️ 快捷操作**: 在结果列表中可直接 **打开视频**、**打开所在文件夹**、或 **删除文件**。
+- **📌 窗口置顶**: 需要时可开启置顶，方便边查看结果边操作其它窗口。
+- **🗑️ 安全删除**: 删除操作会发送到 **回收站**（包含重复删除与清缓存）。
+- **⚙️ 设置与缓存**: 记住主题/语言/格式/窗口状态，显示缓存大小，并可一键清除缓存重置。
 - **🌍 双语支持**: 界面内置中/英文一键切换。
 - **💾 结果导出**: 支持将扫描到的文件列表和统计信息导出为文本文件。
 
@@ -112,18 +131,25 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 ### 🚀 如何使用
 
-1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Scanner/releases) 页面。
+1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Finder/releases) 页面。
 2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
 3. 双击直接运行，无需安装任何环境。
 
 ### 📖 使用说明
 
 1. **选择目录**: 点击 "浏览 (Browse)" 按钮选择要扫描的文件夹。
-2. **格式筛选**: 勾选你想要查找的视频格式（支持快捷全选/反选）。
-3. **开始扫描**: 点击搜索图标按钮，扫描将在后台即时进行，实时显示进度。
-4. **查看结果**: 扫描完成后展示文件总数、文件大小、格式统计图表和详细文件列表。
-5. **检测重复**: 使用 "检测重复" 功能查找并删除重复的视频文件。
-6. **保存结果**: 点击 "保存结果 (Save Results)" 将列表导出为 `.txt` 文件。
+2. **格式筛选**: 勾选你想要查找的视频格式（支持快捷全选/反选），并可选填 **自定义格式**（逗号分隔）。
+3. **（可选）包含视频长度**: 如需在结果中显示时长，请开启 **包含视频长度**。
+4. **开始扫描**: 点击搜索图标按钮，扫描将在后台即时进行，实时显示进度。
+5. **查看与管理结果**: 查看统计信息，并使用按钮 **打开** / **打开文件夹** / **删除**（回收站）。需要时可开启 **窗口置顶**。
+6. **检测重复**: 选择模式后开始检测，并删除选中的重复文件（回收站）。
+7. **保存结果**: 点击 "保存结果 (Save Results)" 将列表导出为 `.txt` 文件。
+
+### ⚙️ 设置与缓存
+
+- 设置与缓存位于 `%APPDATA%\EpicVideoScanner`（例如 `settings.json`）。
+- 关闭 **记住我的设置** 后，应用将不会在下次启动时保留设置。
+- 使用 **清除缓存** 可重置已保存的设置（文件会发送到回收站）。
 
 ### 📋 支持格式
 
