@@ -12,8 +12,11 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
-<img width="2044" height="1597" alt="image" src="https://github.com/user-attachments/assets/7e580866-f167-4915-8211-b1666a1b5453" />
+<img width="2215" height="1816" alt="image" src="https://github.com/user-attachments/assets/5e518083-6333-46c4-a1fa-6aecec1c7043" />
 
+<img width="2185" height="1208" alt="image" src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45" />
+
+<img width="2192" height="1295" alt="image" src="https://github.com/user-attachments/assets/f3c239b6-d542-4ff8-bf4a-a83bdffa6095" />
 
 
 
@@ -143,6 +146,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
