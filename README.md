@@ -12,11 +12,12 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
-<img width="2215" height="1816" alt="image" src="https://github.com/user-attachments/assets/5e518083-6333-46c4-a1fa-6aecec1c7043" />
+<img width="2215" height="1817" alt="image" src="https://github.com/user-attachments/assets/17768df1-d922-4cf6-a6f7-58f44f6b8583" />
 
-<img width="2185" height="1208" alt="image" src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45" />
+<img width="2188" height="1557" alt="image" src="https://github.com/user-attachments/assets/4de4087f-2b56-4b5c-8616-06f28070240c" />
 
-<img width="2192" height="1295" alt="image" src="https://github.com/user-attachments/assets/f3c239b6-d542-4ff8-bf4a-a83bdffa6095" />
+<img width="2177" height="1239" alt="image" src="https://github.com/user-attachments/assets/842c26bd-d221-4fab-87b3-ae3752ec0d3a" />
+
 
 
 
@@ -93,11 +94,12 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 > ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
 
-<img width="2209" height="1820" alt="image" src="https://github.com/user-attachments/assets/17b13e61-b800-4672-a990-0eb6508ee8cb" />
+<img width="2211" height="1813" alt="image" src="https://github.com/user-attachments/assets/3d08a563-4d05-4d0c-9d55-9aba7dce6aae" />
 
-<img width="2192" height="1224" alt="image" src="https://github.com/user-attachments/assets/c1770031-3aa1-4c00-8787-2042ac0c7cb0" />
+<img width="2204" height="1816" alt="image" src="https://github.com/user-attachments/assets/29232ee2-e661-4896-a248-c108da6c5bdb" />
 
-<img width="2187" height="1308" alt="image" src="https://github.com/user-attachments/assets/baa99e4e-2b84-47ce-b25a-63d10d7bb8d4" />
+<img width="2175" height="1301" alt="image" src="https://github.com/user-attachments/assets/abd71f8e-b317-48e8-b47c-662e6bde0b17" />
+
 
 
 
@@ -175,6 +177,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
