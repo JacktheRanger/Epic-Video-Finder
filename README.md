@@ -14,7 +14,7 @@ A modern, beautiful, and powerful video **file** and **duplicate finder**. Now f
 
 <img width="2215" height="1817" alt="image" src="https://github.com/user-attachments/assets/17768df1-d922-4cf6-a6f7-58f44f6b8583" />
 
-<img width="2188" height="1557" alt="image" src="https://github.com/user-attachments/assets/4de4087f-2b56-4b5c-8616-06f28070240c" />
+<img width="2206" height="1817" alt="image" src="https://github.com/user-attachments/assets/a0fffb5e-11ab-414c-bff4-bf6b209d2772" />
 
 <img width="2177" height="1239" alt="image" src="https://github.com/user-attachments/assets/842c26bd-d221-4fab-87b3-ae3752ec0d3a" />
 
@@ -177,6 +177,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
