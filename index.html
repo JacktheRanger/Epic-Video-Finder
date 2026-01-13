@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A modern, beautiful, and powerful video file scanner for Windows. Find, organize, and analyze MP4, MKV, AVI files with stunning GUI.">
-    <meta name="keywords" content="video finder, video scanner, file scanner, MP4 finder, MKV scanner, video organizer, Windows app, Python GUI">
+    <meta name="description"
+        content="A modern, beautiful, and powerful video file scanner for Windows. Find, organize, and analyze MP4, MKV, AVI files with stunning GUI.">
+    <meta name="keywords"
+        content="video finder, video scanner, file scanner, MP4 finder, MKV scanner, video organizer, Windows app, Python GUI">
     <meta name="author" content="Jack Ji">
     <meta name="google-site-verification" content="hxmpQ9BIkE9y0YF-CBi6pu9Wdh7JrEbTnggfieuB_AM" />
     <title>Epic Video Finder - Modern Video Scanner</title>
@@ -40,7 +43,9 @@
         }
 
         /* Typography */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 800;
             line-height: 1.2;
             letter-spacing: -0.02em;
@@ -49,6 +54,7 @@
         h1 {
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 3rem;
@@ -85,7 +91,7 @@
             z-index: 100;
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .nav-content {
@@ -195,7 +201,8 @@
         /* Features */
         .features {
             background: var(--bg-off-white);
-            padding-top: 200px; /* Account for negative margin of screenshot */
+            padding-top: 200px;
+            /* Account for negative margin of screenshot */
         }
 
         .features-grid {
@@ -208,7 +215,7 @@
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -253,7 +260,7 @@
             box-shadow: var(--card-shadow);
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.02);
         }
@@ -292,24 +299,44 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .hero { padding-top: 8rem; }
-            .cta-group { flex-direction: column; }
-            .gallery-grid { grid-template-columns: 1fr; }
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                padding-top: 8rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
-        
+
         /* Floating Animation */
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         .floating {
             animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -319,7 +346,8 @@
                 <img src="LOGO/LOGO.jpg" alt="Logo">
                 Epic Video Finder
             </a>
-            <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+            <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary"
+                style="padding: 0.5rem 1rem; font-size: 0.9rem;">
                 Star on GitHub
             </a>
         </div>
@@ -331,20 +359,25 @@
             <span class="hero-badge">v3.6.0 Available Now</span>
             <h1>Find Your Videos.<br>Beautifully.</h1>
             <p class="hero-subtitle">
-                The most powerful video scanner for Windows. Deep scan, organize, and deduplicate your video collection with a stunning modern interface.
+                The most powerful video scanner for Windows. Deep scan, organize, and deduplicate your video collection
+                with a stunning modern interface.
             </p>
             <div class="cta-group">
                 <a href="https://github.com/JacktheRanger/Epic-Video-Finder/releases" class="btn btn-primary">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
                     Download for Windows
                 </a>
                 <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary">
                     View Source Code
                 </a>
             </div>
-            
+
             <div class="app-showcase">
-                <img src="https://github.com/user-attachments/assets/5e518083-6333-46c4-a1fa-6aecec1c7043" alt="Epic Video Finder Light Theme" class="app-screenshot floating">
+                <img src="https://github.com/user-attachments/assets/5e518083-6333-46c4-a1fa-6aecec1c7043"
+                    alt="Epic Video Finder Light Theme" class="app-screenshot floating">
             </div>
         </div>
     </section>
@@ -358,38 +391,42 @@
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
                     <div class="feature-title">Stunning GUI</div>
-                    <p>Built with Flet and Material Design. Switch instantly between beautiful Light and Dark themes to match your mood.</p>
+                    <p>Built with Flet and Material Design. Switch instantly between beautiful Light and Dark themes to
+                        match your mood.</p>
                 </div>
 
                 <!-- Feature 2 -->
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
                     <div class="feature-title">Deep Scanning</div>
-                    <p>Recursively finds 18+ video formats (MP4, MKV, AVI, etc.) across your entire drive with blazing speed.</p>
+                    <p>Recursively finds 18+ video formats (MP4, MKV, AVI, etc.) across your entire drive with blazing
+                        speed.</p>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="feature-card">
                     <div class="feature-icon">🔍</div>
                     <div class="feature-title">Smart Deduplication</div>
-                    <p>Find duplicates instantly with "Very Fast" mode or ensure 100% accuracy with SHA-256 hash detection.</p>
+                    <p>Find duplicates instantly with "Very Fast" mode or ensure 100% accuracy with SHA-256 hash
+                        detection.</p>
                 </div>
 
                 <!-- Feature 4 -->
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <div class="feature-title">Visual Stats</div>
-                    <p>Track progress with real-time bars and visualize your format distribution with interactive charts.</p>
+                    <p>Track progress with real-time bars and visualize your format distribution with interactive
+                        charts.</p>
                 </div>
-                
-                 <!-- Feature 5 -->
+
+                <!-- Feature 5 -->
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <div class="feature-title">Bilingual Support</div>
                     <p>Native support for both English and Chinese (中文). Switch languages with a single click.</p>
                 </div>
-                
-                 <!-- Feature 6 -->
+
+                <!-- Feature 6 -->
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
                     <div class="feature-title">Safe & Secure</div>
@@ -405,17 +442,14 @@
             <h2>See it in action</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45" alt="Dark Mode Interface">
+                    <img src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45"
+                        alt="Dark Mode Interface">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://github.com/user-attachments/assets/f3c239b6-d542-4ff8-bf4a-a83bdffa6095" alt="Duplicate Finder">
+                    <img src="https://github.com/user-attachments/assets/f3c239b6-d542-4ff8-bf4a-a83bdffa6095"
+                        alt="Duplicate Finder">
                 </div>
-                <div class="gallery-item">
-                     <img src="https://github.com/user-attachments/assets/17b13e61-b800-4672-a990-0eb6508ee8cb" alt="Chinese Interface">
-                </div>
-                 <div class="gallery-item">
-                     <img src="https://github.com/user-attachments/assets/c1770031-3aa1-4c00-8787-2042ac0c7cb0" alt="Scanning Progress">
-                </div>
+
             </div>
         </div>
     </section>
@@ -437,4 +471,5 @@
     </footer>
 
 </body>
+
 </html>
