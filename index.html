@@ -54,10 +54,12 @@
 
         h1 {
             font-size: clamp(2.5rem, 5vw, 4.5rem);
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary);
+            /* Fallback to solid color for animation compatibility */
+            /* background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); */
+            /* background-clip: text; */
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
             margin-bottom: 3rem;
             text-align: center;
         }
@@ -346,6 +348,27 @@
                 display: none !important;
             }
         }
+
+        /* SplitText Animation */
+        /* SplitText Animation */
+        .split-char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease-out;
+            will-change: transform, opacity;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .animate-split-text .split-char {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(var(--char-index) * 0.03s + 0.1s);
+        }
+
+        .split-char.space {
+            width: 0.3em;
+        }
     </style>
 </head>
 
@@ -488,7 +511,9 @@
         </div>
     </footer>
 
+
+    <script src="js/antigravity.js"></script>
+    <script src="js/split-text.js"></script>
 </body>
-<script src="js/antigravity.js"></script>
 
 </html>
