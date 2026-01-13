@@ -90,6 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         splitText(target);
 
+        // Calculate total animation duration
+        // CSS: transition-delay: calc(var(--char-index) * 0.03s + 0.1s);
+        // CSS: transition-duration: 0.6s
+        // Total time = (max_char_index * 0.03) + 0.1 + 0.6
+        const nodes = Array.from(target.querySelectorAll('.split-char'));
+        const maxIndex = nodes.length > 0 ? nodes.length - 1 : 0;
+        const totalDuration = (maxIndex * 0.03 + 0.1 + 0.6) * 1000;
+
+        // console.log(`SplitText: Animation duration ~${totalDuration}ms`);
+
+        setTimeout(() => {
+            // console.log('SplitText: Animation complete');
+            target.dispatchEvent(new CustomEvent('split-text-complete'));
+        }, totalDuration + 100); // 100ms buffer
+
     } catch (e) {
         // console.error('SplitText: Error executing split', e);
     }
