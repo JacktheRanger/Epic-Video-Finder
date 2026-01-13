@@ -2,70 +2,439 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="hxmpQ9BIkE9y0YF-CBi6pu9Wdh7JrEbTnggfieuB_AM" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epic Video Finder - Modern Video File Scanner</title>
     <meta name="description" content="A modern, beautiful, and powerful video file scanner for Windows. Find, organize, and analyze MP4, MKV, AVI files with stunning GUI.">
     <meta name="keywords" content="video finder, video scanner, file scanner, MP4 finder, MKV scanner, video organizer, Windows app, Python GUI">
     <meta name="author" content="Jack Ji">
+    <meta name="google-site-verification" content="imUMnGD8GS5WCN7zx2_TUyrgTomBay9jqf6XhdULgPI" />
+    <title>Epic Video Finder - Modern Video Scanner</title>
+    <link rel="icon" type="image/x-icon" href="LOGO/LOGO.ico">
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --accent: #8b5cf6;
+            --bg-light: #ffffff;
+            --bg-off-white: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        /* Layout */
         .container {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        h1 { color: #667eea; margin-bottom: 10px; }
-        .subtitle { color: #666; font-size: 1.2em; margin-bottom: 30px; }
-        .features { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
-        .btn {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
+
+        section {
+            padding: 6rem 0;
+        }
+
+        /* Header */
+        header {
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-main);
             text-decoration: none;
-            font-weight: bold;
-            margin: 10px 10px 10px 0;
         }
-        .btn:hover { background: #5a6fd6; }
-        .btn-secondary { background: #28a745; }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+        }
+
+        /* Hero */
+        .hero {
+            padding-top: 10rem;
+            text-align: center;
+            background: radial-gradient(circle at top center, #f0fdfa 0%, #fff 40%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-main);
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-muted);
+            background: #f8fafc;
+        }
+
+        /* Assets Showcase */
+        .app-showcase {
+            position: relative;
+            margin-bottom: -150px;
+            z-index: 10;
+        }
+
+        .app-screenshot {
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border: 8px solid rgba(255, 255, 255, 0.5);
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Features */
+        .features {
+            background: var(--bg-off-white);
+            padding-top: 200px; /* Account for negative margin of screenshot */
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            margin-left: 1.5rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { padding-top: 8rem; }
+            .cta-group { flex-direction: column; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🔍 Epic Video Finder</h1>
-        <p class="subtitle">A modern, beautiful, and powerful video file scanner for Windows</p>
-        
-        <div class="features">
-            <h3>✨ Key Features</h3>
-            <ul>
-                <li>🎨 Modern GUI with Light/Dark themes</li>
-                <li>🔄 Deep scan 18+ video formats (MP4, MKV, AVI, MOV...)</li>
-                <li>📊 Visual statistics and progress tracking</li>
-                <li>🌍 Bilingual support (English/中文)</li>
-                <li>💾 Export results to text file</li>
-            </ul>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="LOGO/LOGO.jpg" alt="Logo">
+                Epic Video Finder
+            </a>
+            <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                Star on GitHub
+            </a>
         </div>
-        
-        <a href="https://github.com/JacktheRanger/Epic-Video-Finder/releases" class="btn">⬇️ Download Latest Release</a>
-        <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary">📂 View on GitHub</a>
-        
-        <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
-        <p style="color: #666; font-size: 0.9em;">
-            Built with ❤️ by Jack Ji | 
-            <a href="https://github.com/JacktheRanger/Epic-Video-Finder">GitHub Repository</a> |
-            License: GPL-3.0
-        </p>
-    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">v3.6.0 Available Now</span>
+            <h1>Find Your Videos.<br>Beautifully.</h1>
+            <p class="hero-subtitle">
+                The most powerful video scanner for Windows. Deep scan, organize, and deduplicate your video collection with a stunning modern interface.
+            </p>
+            <div class="cta-group">
+                <a href="https://github.com/JacktheRanger/Epic-Video-Finder/releases" class="btn btn-primary">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Download for Windows
+                </a>
+                <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary">
+                    View Source Code
+                </a>
+            </div>
+            
+            <div class="app-showcase">
+                <img src="https://github.com/user-attachments/assets/5e518083-6333-46c4-a1fa-6aecec1c7043" alt="Epic Video Finder Light Theme" class="app-screenshot floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Everything you need</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-title">Stunning GUI</div>
+                    <p>Built with Flet and Material Design. Switch instantly between beautiful Light and Dark themes to match your mood.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-title">Deep Scanning</div>
+                    <p>Recursively finds 18+ video formats (MP4, MKV, AVI, etc.) across your entire drive with blazing speed.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Smart Deduplication</div>
+                    <p>Find duplicates instantly with "Very Fast" mode or ensure 100% accuracy with SHA-256 hash detection.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Visual Stats</div>
+                    <p>Track progress with real-time bars and visualize your format distribution with interactive charts.</p>
+                </div>
+                
+                 <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">Bilingual Support</div>
+                    <p>Native support for both English and Chinese (中文). Switch languages with a single click.</p>
+                </div>
+                
+                 <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-title">Safe & Secure</div>
+                    <p>All deletions go to the Recycle Bin. No accidental data loss. Your files are safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section>
+        <div class="container">
+            <h2>See it in action</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45" alt="Dark Mode Interface">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://github.com/user-attachments/assets/f3c239b6-d542-4ff8-bf4a-a83bdffa6095" alt="Duplicate Finder">
+                </div>
+                <div class="gallery-item">
+                     <img src="https://github.com/user-attachments/assets/17b13e61-b800-4672-a990-0eb6508ee8cb" alt="Chinese Interface">
+                </div>
+                 <div class="gallery-item">
+                     <img src="https://github.com/user-attachments/assets/c1770031-3aa1-4c00-8787-2042ac0c7cb0" alt="Scanning Progress">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="font-size: 1rem;">
+                    © 2024 Jack Ji. Open Source (GPL-3.0)
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/JacktheRanger/Epic-Video-Finder">GitHub</a>
+                    <a href="https://github.com/JacktheRanger/Epic-Video-Finder/issues">Report Issue</a>
+                    <a href="https://buymeacoffee.com/jackji">Buy me a coffee</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
