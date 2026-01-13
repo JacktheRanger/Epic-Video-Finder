@@ -12,14 +12,15 @@
     <meta name="google-site-verification" content="hxmpQ9BIkE9y0YF-CBi6pu9Wdh7JrEbTnggfieuB_AM" />
     <title>Epic Video Finder - Modern Video Scanner</title>
     <link rel="icon" type="image/x-icon" href="LOGO/LOGO.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
     <style>
         :root {
             --primary: #6366f1;
             --primary-dark: #4f46e5;
             --secondary: #ec4899;
             --accent: #8b5cf6;
-            --bg-light: #ffffff;
-            --bg-off-white: #f8fafc;
+            --bg-light: transparent;
+            --bg-off-white: rgba(248, 250, 252, 0.7);
             --text-main: #1e293b;
             --text-muted: #64748b;
             --glass-bg: rgba(255, 255, 255, 0.7);
@@ -89,7 +90,7 @@
             width: 100%;
             top: 0;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
@@ -120,7 +121,7 @@
         .hero {
             padding-top: 10rem;
             text-align: center;
-            background: radial-gradient(circle at top center, #f0fdfa 0%, #fff 40%);
+            /* background: radial-gradient(circle at top center, #f0fdfa 0%, #fff 40%); Removed for transparency */
         }
 
         .hero-badge {
@@ -200,7 +201,7 @@
 
         /* Features */
         .features {
-            background: var(--bg-off-white);
+            background: transparent;
             padding-top: 200px;
             /* Account for negative margin of screenshot */
         }
@@ -212,7 +213,8 @@
         }
 
         .feature-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             padding: 2.5rem;
             border-radius: 20px;
             border: 1px solid rgba(0, 0, 0, 0.05);
@@ -273,7 +275,8 @@
 
         /* Footer */
         footer {
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             padding: 4rem 0 2rem;
             border-top: 1px solid #f1f5f9;
         }
@@ -379,8 +382,14 @@
                 <img src="https://github.com/user-attachments/assets/5e518083-6333-46c4-a1fa-6aecec1c7043"
                     alt="Epic Video Finder Light Theme" class="app-screenshot floating">
             </div>
+
+            <!-- Antigravity Animation Container removed from here -->
         </div>
     </section>
+
+    <!-- Global Background Animation -->
+    <div id="antigravity-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    </div>
 
     <!-- Features Section -->
     <section class="features">
@@ -471,5 +480,6 @@
     </footer>
 
 </body>
+<script src="js/antigravity.js"></script>
 
 </html>
