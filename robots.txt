@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jackthethanger.github.io/Epic-Video-Finder/sitemap.xml
