@@ -40,6 +40,20 @@
     const clock = new THREE.Clock();
 
     function init() {
+        // Check if mobile device - disable animation on mobile for better UX
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+            || ('ontouchstart' in window)
+            || (navigator.maxTouchPoints > 0);
+
+        if (isMobile) {
+            // Hide the container on mobile
+            const mobileContainer = document.getElementById('antigravity-container');
+            if (mobileContainer) {
+                mobileContainer.style.display = 'none';
+            }
+            return;
+        }
+
         container = document.getElementById('antigravity-container');
         if (!container) return;
 
