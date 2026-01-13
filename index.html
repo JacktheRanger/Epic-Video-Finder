@@ -337,6 +337,15 @@
         .floating {
             animation: float 6s ease-in-out infinite;
         }
+
+        /* Hide Antigravity animation on mobile/touch devices */
+        @media (max-width: 1024px),
+        (hover: none),
+        (pointer: coarse) {
+            #antigravity-container {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -374,7 +383,7 @@
                     Download for Windows
                 </a>
                 <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary">
-                    View Github
+                    View on Github
                 </a>
             </div>
 
