@@ -16,7 +16,8 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 <img width="2212" height="1858" alt="image" src="https://github.com/user-attachments/assets/cc6a7f1b-406b-46bb-a535-e8b9fdb62209" />
 
-<img width="2198" height="1239" alt="image" src="https://github.com/user-attachments/assets/5561d634-1d5d-449a-a549-338507d78b5b" />
+<img width="2203" height="1318" alt="image" src="https://github.com/user-attachments/assets/f7a559e9-443d-4659-b2ed-e0d0d329de76" />
+
 
 
 
@@ -98,7 +99,8 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 <img width="2208" height="1864" alt="image" src="https://github.com/user-attachments/assets/b6a42b68-468b-4b91-a522-fd12470eaf26" />
 
-<img width="2207" height="1226" alt="image" src="https://github.com/user-attachments/assets/d52a8f48-2594-4c7b-8cc7-c45f929e0337" />
+<img width="2201" height="1316" alt="image" src="https://github.com/user-attachments/assets/48cabba9-851d-4911-923a-5dc2b34efc22" />
+
 
 
 
@@ -180,6 +182,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
