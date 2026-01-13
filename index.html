@@ -119,6 +119,19 @@
             border-radius: 8px;
         }
 
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
         /* Hero */
         .hero {
             padding-top: 10rem;
@@ -379,7 +392,10 @@
         <div class="container nav-content">
             <a href="#" class="logo">
                 <img src="LOGO/LOGO.jpg" alt="Logo">
-                Epic Video Finder
+                <div class="logo-text">
+                    Epic Video Finder
+                    <span class="logo-subtitle">by Jack Ji</span>
+                </div>
             </a>
             <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary"
                 style="padding: 0.5rem 1rem; font-size: 0.9rem;">
