@@ -44,6 +44,44 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            cursor: none;
+            /* Hide default cursor */
+        }
+
+        /* Custom Cursor */
+        #custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #328069;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+            mix-blend-mode: difference;
+        }
+
+        #custom-cursor.active {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(99, 102, 241, 0.1);
+            border-color: var(--secondary);
+        }
+
+        /* Hide custom cursor on mobile */
+        @media (max-width: 1024px),
+        (hover: none),
+        (pointer: coarse) {
+            #custom-cursor {
+                display: none;
+            }
+
+            body {
+                cursor: auto;
+            }
         }
 
         /* Typography */
@@ -536,6 +574,31 @@
     <script src="js/version-check.js"></script>
     <script src="js/split-text.js"></script>
     <script src="js/gradient-text.js"></script>
+    <div id="custom-cursor"></div>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mousedown', () => {
+            cursor.classList.add('active');
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursor.classList.remove('active');
+        });
+
+        // Add hover effect for clickable elements
+        const clickables = document.querySelectorAll('a, button, .clickable');
+        clickables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+        });
+    </script>
 </body>
 
 </html>
