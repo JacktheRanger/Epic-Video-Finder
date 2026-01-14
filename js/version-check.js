@@ -20,20 +20,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to update the badge text
-    const updateBadge = (version) => {
-        // Ensure version starts with 'V' or 'v' if it's just a number, though usually tags have it.
-        // If the tag is like "v1.0.0", we use it as is.
-        // If the tag is "1.0.0", we might want to prepend "V".
+    window.updateVersionBadgeText = () => {
+        const currentLang = localStorage.getItem('epic_video_finder_lang') || 'en';
+        const version = localStorage.getItem(CACHE_KEY_VERSION);
+        if (!version) return; // Wait for fetch
+
         let displayVersion = version;
         if (!displayVersion.toLowerCase().startsWith('v')) {
             displayVersion = 'V' + displayVersion;
         }
-        // Capitalize the first letter if it checks out (v -> V) for consistency with design
         if (displayVersion.startsWith('v')) {
             displayVersion = 'V' + displayVersion.substring(1);
         }
 
-        badgeElement.textContent = `${displayVersion} Available Now`;
+        const availableText = currentLang === 'en' ? "Available Now" : "现已发布";
+        // Also update the static text if it's the first load or fallback
+        if (badgeElement) {
+            badgeElement.textContent = `${displayVersion} ${availableText}`;
+        }
+    };
+
+    const updateBadge = (version) => {
+        // Just store version and call the main update function which handles language
+        // We might need to store it in a way available to the window function if not using localStorage for the *exact* string passed here
+        // But the logic below stores it in localStorage anyway.
+        // So we can just call our new window function.
+        // However, we need to ensure the version is stored before calling.
+        // The original logic calls updateBadge then stores. 
+        // Let's modify the usage sites.
+
+        // Actually, let's just make updateBadge update the text directly using the current language
+        const currentLang = localStorage.getItem('epic_video_finder_lang') || 'en';
+
+        let displayVersion = version;
+        if (!displayVersion.toLowerCase().startsWith('v')) {
+            displayVersion = 'V' + displayVersion;
+        }
+        if (displayVersion.startsWith('v')) {
+            displayVersion = 'V' + displayVersion.substring(1);
+        }
+
+        const availableText = translations && translations[currentLang] ? translations[currentLang]["hero.badge"] : "Available Now";
+        badgeElement.textContent = `${displayVersion} ${availableText}`;
     };
 
     // Check cache first
