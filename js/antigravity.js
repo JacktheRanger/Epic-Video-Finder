@@ -310,6 +310,13 @@
     }
 
     // Start
-    window.addEventListener('DOMContentLoaded', init);
+    // Start - Defer until first mouse move
+    function startOnInteraction() {
+        window.removeEventListener('mousemove', startOnInteraction);
+        init();
+    }
+
+    // Wait for first mouse move to initialize
+    window.addEventListener('mousemove', startOnInteraction);
 
 })();
