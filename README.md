@@ -72,14 +72,6 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 - Turn off **Remember my settings** if you don't want the app to persist settings between launches.
 - Use **Clear Cache** to reset saved settings (items are sent to the Recycle Bin).
 
-### 📋 Supported Formats
-
-| Priority | Others |
-|----------|--------|
-| `.mp4` `.mov` `.mkv` | `.wmv` `.flv` `.webm` |
-| `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
-| `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
-
 
 ### 📄 License
 GNU AGPL-3.0
@@ -162,13 +154,6 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 - 关闭 **记住我的设置** 后，应用将不会在下次启动时保留设置。
 - 使用 **清除缓存** 可重置已保存的设置（文件会发送到回收站）。
 
-### 📋 支持格式
-
-| 常用格式 | 其他格式 |
-|----------|--------|
-| `.mp4` `.mov` `.mkv` | `.wmv` `.flv` `.webm` |
-| `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
-| `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
 ### 📄 许可证
 GNU AGPL-3.0
@@ -186,6 +171,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
