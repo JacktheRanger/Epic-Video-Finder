@@ -1,86 +1,14 @@
 /**
- * README Images Auto-Fetcher
- * Automatically fetches and displays images from the project's README.md
- * Shows English or Chinese screenshots based on current language setting
+ * README Images Language Switcher
  * 
- * Image distribution:
- * - 1st image: Hero/App Showcase section
- * - 2nd & 3rd images: Gallery section ("See it in action")
+ * Switches images between English and Chinese versions based on current language.
+ * Image URLs are pre-populated in HTML via data-img-en and data-img-zh attributes.
+ * These attributes are auto-updated by GitHub Actions when README.md changes.
  */
 
 (function () {
-    const GITHUB_REPO = 'JacktheRanger/Epic-Video-Finder';
-    const README_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/README.md`;
-
-    // Container IDs
     const HERO_IMAGE_CLASS = 'app-screenshot';
     const GALLERY_CONTAINER_ID = 'readme-gallery';
-
-    // Cache for parsed images
-    let cachedImages = {
-        en: [],
-        zh: []
-    };
-
-    /**
-     * Fetches README content and extracts image URLs by language section
-     */
-    async function fetchReadmeImages() {
-        try {
-            const response = await fetch(README_RAW_URL);
-            if (!response.ok) {
-                throw new Error(`Failed to fetch README: ${response.status}`);
-            }
-
-            const readmeContent = await response.text();
-
-            // Split content by language sections
-            // English section: from start to "## 中文"
-            // Chinese section: from "## 中文" to end
-            const chineseSectionIndex = readmeContent.indexOf('## 中文');
-
-            let englishSection = readmeContent;
-            let chineseSection = '';
-
-            if (chineseSectionIndex !== -1) {
-                englishSection = readmeContent.substring(0, chineseSectionIndex);
-                chineseSection = readmeContent.substring(chineseSectionIndex);
-            }
-
-            // Extract GitHub user-attachments image URLs from each section
-            const imageRegex = /https:\/\/github\.com\/user-attachments\/assets\/[a-f0-9-]+/gi;
-
-            const englishMatches = englishSection.match(imageRegex) || [];
-            const chineseMatches = chineseSection.match(imageRegex) || [];
-
-            // Store unique images for each language
-            cachedImages.en = [...new Set(englishMatches)];
-            cachedImages.zh = [...new Set(chineseMatches)];
-
-            console.log(`Found ${cachedImages.en.length} English images and ${cachedImages.zh.length} Chinese images in README.md`);
-
-            return cachedImages;
-        } catch (error) {
-            console.error('Error fetching README images:', error);
-            return { en: [], zh: [] };
-        }
-    }
-
-    /**
-     * Creates gallery item HTML for an image
-     */
-    function createGalleryItem(imageUrl, index) {
-        const div = document.createElement('div');
-        div.className = 'gallery-item';
-
-        const img = document.createElement('img');
-        img.src = imageUrl;
-        img.alt = `Screenshot ${index + 1}`;
-        img.loading = 'eager'; // Load immediately for smooth experience
-
-        div.appendChild(img);
-        return div;
-    }
 
     /**
      * Gets current language from localStorage or defaults to 'en'
@@ -90,73 +18,58 @@
     }
 
     /**
-     * Updates the hero showcase image (1st image)
+     * Updates image src based on current language using data attributes
      */
-    function updateHeroImage() {
-        const heroImg = document.querySelector(`.${HERO_IMAGE_CLASS}`);
-        if (!heroImg) {
-            console.warn(`Hero image .${HERO_IMAGE_CLASS} not found`);
-            return;
-        }
-
+    function updateImageForLanguage(img) {
         const lang = getCurrentLanguage();
-        const images = cachedImages[lang] || cachedImages.en;
+        const enSrc = img.dataset.imgEn;
+        const zhSrc = img.dataset.imgZh;
 
-        if (images.length > 0) {
-            heroImg.src = images[0];
-            heroImg.alt = lang === 'zh' ? 'Epic Video Finder 界面' : 'Epic Video Finder Interface';
-            console.log(`Updated hero image to ${lang.toUpperCase()} version`);
+        if (!enSrc) return; // No data attributes, skip
+
+        const targetSrc = lang === 'zh' ? (zhSrc || enSrc) : enSrc;
+
+        if (img.src !== targetSrc) {
+            // Fade transition for hero image
+            if (img.classList.contains(HERO_IMAGE_CLASS)) {
+                img.classList.add('fade-out');
+                setTimeout(() => {
+                    img.src = targetSrc;
+                    img.classList.remove('fade-out');
+                }, 300);
+            } else {
+                img.src = targetSrc;
+            }
         }
     }
 
     /**
-     * Renders gallery images (2nd & 3rd images only)
-     */
-    function renderGallery() {
-        const container = document.getElementById(GALLERY_CONTAINER_ID);
-        if (!container) {
-            console.warn(`Gallery container #${GALLERY_CONTAINER_ID} not found`);
-            return;
-        }
-
-        const lang = getCurrentLanguage();
-        const images = cachedImages[lang] || cachedImages.en;
-
-        // Get only 2nd and 3rd images (skip the 1st one used for hero)
-        const galleryImages = images.slice(1);
-
-        if (galleryImages.length === 0) {
-            return;
-        }
-
-        // Clear existing content
-        container.innerHTML = '';
-
-        // Add each image to the gallery
-        galleryImages.forEach((imageUrl, index) => {
-            const galleryItem = createGalleryItem(imageUrl, index);
-            container.appendChild(galleryItem);
-        });
-
-        console.log(`Rendered ${galleryImages.length} ${lang.toUpperCase()} images in gallery`);
-    }
-
-    /**
-     * Updates all images based on current language
+     * Updates all images with data attributes
      */
     function updateAllImages() {
-        updateHeroImage();
-        renderGallery();
+        // Update hero image
+        const heroImg = document.querySelector(`.${HERO_IMAGE_CLASS}`);
+        if (heroImg) {
+            updateImageForLanguage(heroImg);
+        }
+
+        // Update gallery images
+        const gallery = document.getElementById(GALLERY_CONTAINER_ID);
+        if (gallery) {
+            gallery.querySelectorAll('img[data-img-en]').forEach(updateImageForLanguage);
+        }
+
+        console.log(`Images updated for ${getCurrentLanguage().toUpperCase()} language`);
     }
 
     /**
-     * Initialize: fetch and display README images
+     * Initialize
      */
-    async function init() {
-        await fetchReadmeImages();
+    function init() {
+        // Update images on page load (in case language was previously set)
         updateAllImages();
 
-        // Listen for language changes (triggered by language-manager.js)
+        // Listen for language changes
         window.addEventListener('languageChanged', updateAllImages);
     }
 
