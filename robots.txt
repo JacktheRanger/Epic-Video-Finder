@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jackthethanger.github.io/Epic-Video-Finder/sitemap.xml
+Sitemap: https://jacktheranger.github.io/Epic-Video-Finder/sitemap.xml
+Sitemap: https://epic-video-finder.pages.dev/sitemap.xml
