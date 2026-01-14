@@ -456,22 +456,26 @@
                 <img src="LOGO/LOGO.jpg" alt="Logo">
                 <div class="logo-text">
                     Epic Video Finder
-                    <span class="logo-subtitle">by Jack Ji</span>
+                    <span class="logo-subtitle" data-i18n="nav.subtitle">by Jack Ji</span>
                 </div>
             </a>
-            <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary"
-                style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-                Star on GitHub
-            </a>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                    <span data-i18n="nav.star">Star on GitHub</span>
+                </a>
+                <button id="lang-toggle" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem; min-width: 50px; justify-content: center;">EN</button>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <span id="version-badge" class="hero-badge">V3.6.0 Available Now</span>
-            <h1>Find Your Videos.<br>Beautifully.</h1>
-            <p class="hero-subtitle">
+            <span id="version-badge" class="hero-badge" data-i18n="hero.badge">V3.6.0 Available Now</span>
+            <h1 data-i18n="hero.title">Find Your Videos.<br>Beautifully.</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
                 The most powerful video scanner for Windows. Deep scan, organize, and deduplicate your video collection
                 with a stunning modern interface.
             </p>
@@ -481,9 +485,10 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
-                    Download for Windows
+                    <span data-i18n="hero.download">Download for Windows</span>
                 </a>
-                <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary">
+                <a href="https://github.com/JacktheRanger/Epic-Video-Finder" class="btn btn-secondary"
+                    data-i18n="hero.view_github">
                     View on Github
                 </a>
             </div>
@@ -504,52 +509,58 @@
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2>Everything you need</h2>
+            <h2 data-i18n="features.title">Everything you need</h2>
             <div class="features-grid">
                 <!-- Feature 1 -->
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
-                    <div class="feature-title">Stunning GUI</div>
-                    <p>Built with Flet and Material Design. Switch instantly between beautiful Light and Dark themes to
+                    <div class="feature-title" data-i18n="feature.gui.title">Stunning GUI</div>
+                    <p data-i18n="feature.gui.desc">Built with Flet and Material Design. Switch instantly between
+                        beautiful Light and Dark themes to
                         match your mood.</p>
                 </div>
 
                 <!-- Feature 2 -->
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
-                    <div class="feature-title">Deep Scanning</div>
-                    <p>Recursively finds 18+ video formats (MP4, MKV, AVI, etc.) across your entire drive with blazing
+                    <div class="feature-title" data-i18n="feature.scan.title">Deep Scanning</div>
+                    <p data-i18n="feature.scan.desc">Recursively finds 18+ video formats (MP4, MKV, AVI, etc.) across
+                        your entire drive with blazing
                         speed.</p>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="feature-card">
                     <div class="feature-icon">🔍</div>
-                    <div class="feature-title">Smart Deduplication</div>
-                    <p>Find duplicates instantly with "Very Fast" mode or ensure 100% accuracy with SHA-256 hash
+                    <div class="feature-title" data-i18n="feature.dedup.title">Smart Deduplication</div>
+                    <p data-i18n="feature.dedup.desc">Find duplicates instantly with "Very Fast" mode or ensure 100%
+                        accuracy with SHA-256 hash
                         detection.</p>
                 </div>
 
                 <!-- Feature 4 -->
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <div class="feature-title">Visual Stats</div>
-                    <p>Track progress with real-time bars and visualize your format distribution with interactive
+                    <div class="feature-title" data-i18n="feature.stats.title">Visual Stats</div>
+                    <p data-i18n="feature.stats.desc">Track progress with real-time bars and visualize your format
+                        distribution with interactive
                         charts.</p>
                 </div>
 
                 <!-- Feature 5 -->
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
-                    <div class="feature-title">Bilingual Support</div>
-                    <p>Native support for both English and Simplified Chinese. Switch languages with a single click.</p>
+                    <div class="feature-title" data-i18n="feature.bilingual.title">Bilingual Support</div>
+                    <p data-i18n="feature.bilingual.desc">Native support for both English and Simplified Chinese. Switch
+                        languages with a single click.</p>
                 </div>
 
                 <!-- Feature 6 -->
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <div class="feature-title">Safe & Secure</div>
-                    <p>All deletions go to the Recycle Bin. No accidental data loss. Your files are safe.</p>
+                    <div class="feature-title" data-i18n="feature.secure.title">Safe & Secure</div>
+                    <p data-i18n="feature.secure.desc">All deletions go to the Recycle Bin. No accidental data loss.
+                        Your files are safe.</p>
                 </div>
             </div>
         </div>
@@ -558,7 +569,7 @@
     <!-- Gallery Section -->
     <section>
         <div class="container">
-            <h2>See it in action</h2>
+            <h2 data-i18n="gallery.title">See it in action</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45"
@@ -577,16 +588,17 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo" style="font-size: 1rem;">
+                <div class="logo" style="font-size: 1rem;" data-i18n="footer.rights">
                     © 2026 Jack Ji. Open Source (AGPL-3.0)
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/JacktheRanger/Epic-Video-Finder">GitHub</a>
-                    <a href="https://github.com/JacktheRanger/Epic-Video-Finder/issues">Report Issue</a>
-                    <a href="https://buymeacoffee.com/jackji">Buy me a coffee</a>
+                    <a href="https://github.com/JacktheRanger/Epic-Video-Finder" data-i18n="footer.github">GitHub</a>
+                    <a href="https://github.com/JacktheRanger/Epic-Video-Finder/issues" data-i18n="footer.issue">Report
+                        Issue</a>
+                    <a href="https://buymeacoffee.com/jackji" data-i18n="footer.coffee">Buy me a coffee</a>
                     <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
                         class="back-to-top-btn">
-                        <span>Back to Top</span>
+                        <span data-i18n="footer.top">Back to Top</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" style="margin-left: 6px;">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -600,6 +612,8 @@
 
 
     <script src="js/antigravity.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language-manager.js"></script>
     <script src="js/version-check.js"></script>
     <script src="js/split-text.js"></script>
     <script src="js/gradient-text.js"></script>
