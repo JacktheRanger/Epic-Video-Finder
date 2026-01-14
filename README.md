@@ -3,7 +3,8 @@
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
 **Language**: [English](#english) | [中文](#中文)
-**Homepage**: [https://epic-video-finder.pages.dev/](https://epic-video-finder.pages.dev/)
+
+**Homepage**: [https://epic-video-finder.pages.dev](https://epic-video-finder.pages.dev)
 
 ---
 
@@ -89,6 +90,8 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ---
 
 ## 中文
+
+**官网**: [https://epic-video-finder.pages.dev](https://epic-video-finder.pages.dev)
 
 # 🔍 史诗级视频扫描 & 重复文件检测器
 
