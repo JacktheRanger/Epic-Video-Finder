@@ -18,20 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log('GradientText: Activating');
 
         // 1. Inject CSS styles dynamically
-        // Zoom Strategy: To show fewer colors at once, we stretch the gradient even larger (600% width).
-        // Gradient Content: [Colors, Colors] (Two full sets).
-        // Each "Set" takes up 300% (half of 600%).
-        // Visible Window: 100% (1/3 of a Set). So we see ~1/3 of the colors at once.
-        // Loop Logic:
-        // We need to shift background by exactly one Set length (300%).
-        // Max Shift (from 100% to 0% pos) = BgSize(600) - WinSize(100) = 500%.
-        // Target Shift = 300%.
-        // Fraction P = 300 / 500 = 0.6.
-        // So we animate across a 60% range of the background-position capability, e.g., 80% -> 20%.
-        // 80% Pos leads to Offset = 500% * 0.8 = 400% (Start of 2nd set + 100% into it).
-        // 20% Pos leads to Offset = 500% * 0.2 = 100% (Start of 1st set + 100% into it).
-        // Identical visual state. Loop achieved.
-        const gradientColors = [...config.colors, ...config.colors].join(', ');
+        // Zoom Strategy & Loop Fix:
+        // To ensure a smooth loop without stutter, the gradient sequence must be seamless.
+        // We append the first color to the end: [C1, C2, C3, C4, C5, C1].
+        // This ensures the value at 100% (C1) matches the value at 0% (C1).
+        // Size: 300% width (to maintain the zoomed-in look).
+        // Animation:
+        // We need to slide by exactly one full pattern length (300%).
+        // With background-size: 300% (Image=3W, Container=1W), the leverage factor is 1W-3W = -2W.
+        // background-position % P maps to Offset = -2W * (P/100).
+        // We want Offset range of 3W (one full image width).
+        // Range = 3W.
+        // Delta P * |-2W| = 3W  =>  Delta P = 1.5 (150%).
+        // So we animate from 150% to 0%.
+
+        const loopColors = [...config.colors, config.colors[0]];
+        const gradientColors = loopColors.join(', ');
 
         const styleId = 'gradient-text-style';
         if (!document.getElementById(styleId)) {
@@ -39,14 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
             style.id = styleId;
             style.textContent = `
                 @keyframes gradient-flow {
-                    0% { background-position: 80% 50%; }
-                    100% { background-position: 20% 50%; }
+                    0% { background-position: 150% 50%; }
+                    100% { background-position: 0% 50%; }
                 }
                 
                 .gradient-text-active {
                     position: relative;
                     background-image: linear-gradient(to right, ${gradientColors});
-                    background-size: 600% 100%;
+                    background-size: 300% 100%;
                     animation: gradient-flow ${config.animationSpeed}s linear infinite;
                     -webkit-background-clip: text;
                     background-clip: text;
