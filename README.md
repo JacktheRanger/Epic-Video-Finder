@@ -30,7 +30,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 - **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design aesthetics.
 - **📁 Native Dialogs**: Uses Windows native directory and file pickers (via Tkinter) for 100% reliability.
-- **🔄 Deep Scanning**: Recursively finds 18+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
+- **🔄 Deep Scanning**: Recursively finds 20+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
 - **📊 Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
 - **🔍 Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
   - **Very Fast Mode**: Instant detection by file size comparison.
@@ -120,7 +120,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 - **🎨 现代化界面**: 极具质感的色彩主题与 Material Design 设计。
 - **📁 原生体验**: 集成 Windows 原生文件/目录选择框 (Tkinter 引擎)，稳定可靠。
-- **🔄 深度扫描**: 递归查找子目录中 18+ 种常见及罕见的视频格式。
+- **🔄 深度扫描**: 递归查找子目录中 20+ 种常见及罕见的视频格式。
 - **📊 可视化统计**: 实时扫描进度条，扫描结果格式分布柱状图，显示文件大小。
 - **🔍 重复文件检测**: 识别并管理重复的视频文件，提供两种检测模式：
   - **极速模式**: 通过文件大小瞬间对比检测。
