@@ -337,10 +337,18 @@
         }
 
         /* Footer */
+        .back-to-top-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
         .back-to-top-btn {
             display: inline-flex;
             align-items: center;
-            padding: 0.5rem 1.5rem;
+            padding: 0.65rem 1.8rem;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white !important;
             border-radius: 50px;
@@ -348,7 +356,6 @@
             font-weight: 600;
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
             transition: all 0.3s ease;
-            margin-left: 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
@@ -608,16 +615,18 @@
                     <a href="https://github.com/JacktheRanger/Epic-Video-Finder/issues" data-i18n="footer.issue">Report
                         Issue</a>
                     <a href="https://buymeacoffee.com/jackji" data-i18n="footer.coffee">Buy me a coffee</a>
-                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                        class="back-to-top-btn">
-                        <span data-i18n="footer.top">Back to Top</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" style="margin-left: 6px;">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                        </svg>
-                    </a>
                 </div>
+            </div>
+            <div class="back-to-top-container">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="back-to-top-btn">
+                    <span data-i18n="footer.top">Back to Top</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" style="margin-left: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                    </svg>
+                </a>
             </div>
         </div>
     </footer>
