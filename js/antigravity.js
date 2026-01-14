@@ -12,7 +12,7 @@
         waveSpeed: 0.4,
         waveAmplitude: 1,
         particleSize: 1,
-        lerpSpeed: 0.1,
+        lerpSpeed: 0.03,
         color: "#D97757", // Claude Red style
         autoAnimate: false,
         particleVariance: 1,
@@ -22,7 +22,9 @@
         particleShape: "capsule", // 'capsule', 'sphere', 'box', 'tetrahedron'
         fieldStrength: 10,
         cameraPosition: [0, 0, 50],
-        fov: 35
+        fov: 35,
+        bounceRadius: 40, // Trigger radius for the click effect
+        bounceStrength: 30 // Strength of the repulsion
     };
 
     let container, camera, scene, renderer;
@@ -113,6 +115,7 @@
         // Events
         window.addEventListener('mousemove', onMouseMove, false);
         window.addEventListener('resize', onWindowResize, false);
+        window.addEventListener('mousedown', onMouseClick, false);
 
         // Animation Loop
         animate();
@@ -160,6 +163,55 @@
         // Normalized Coordinates: -1 to +1
         mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
         mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    }
+
+    function onMouseClick(event) {
+        if (!container) return;
+        const rect = container.getBoundingClientRect();
+        // Calculate normalized click position
+        const clickX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        const clickY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+        // Calculate world dimensions at camera distance
+        const dist = camera.position.z;
+        const vFOV = THREE.MathUtils.degToRad(camera.fov);
+        const viewHeight = 2 * dist * Math.tan(vFOV / 2);
+        const viewWidth = viewHeight * camera.aspect;
+
+        // Convert to world coordinates
+        const worldClickX = (clickX * viewWidth) / 2;
+        const worldClickY = (clickY * viewHeight) / 2;
+
+        // Apply impulse to particles
+        for (let i = 0; i < config.count; i++) {
+            const p = particles[i];
+
+            // For interaction, we can calculate distance based on the particle's current "visual" position (cx, cy)
+            // or its "projected" position. Using cx, cy makes it feel more direct to where the user sees the dot.
+            // However, p.cx is at z depth p.cz. 
+            // The click is effectively a ray. Ideally we check distance in 2D plane relative to view.
+
+            // Simple approach: Interaction in 2D View Plane
+            // We compare mouse world position (at Z=0 plane roughly) with particle x/y
+
+            const dx = p.cx - worldClickX;
+            const dy = p.cy - worldClickY;
+            const distSq = dx * dx + dy * dy;
+            const dist = Math.sqrt(distSq);
+
+            if (dist < config.bounceRadius) {
+                // Calculate repulsion force
+                // Stronger when closer
+                const force = config.bounceStrength * (1 - dist / config.bounceRadius);
+
+                const angle = Math.atan2(dy, dx);
+
+                // Add to current position instantly
+                // The lerp in animate() will naturally pull it back to target
+                p.cx += Math.cos(angle) * force;
+                p.cy += Math.sin(angle) * force;
+            }
+        }
     }
 
     function onWindowResize() {
