@@ -76,7 +76,7 @@
         const img = document.createElement('img');
         img.src = imageUrl;
         img.alt = `Screenshot ${index + 1}`;
-        img.loading = 'lazy'; // Lazy load for performance
+        img.loading = 'eager'; // Load immediately for smooth experience
 
         div.appendChild(img);
         return div;
