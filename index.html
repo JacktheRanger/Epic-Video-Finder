@@ -330,6 +330,27 @@
         }
 
         /* Footer */
+        .back-to-top-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white !important;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            transition: all 0.3s ease;
+            margin-left: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .back-to-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+            color: white !important;
+        }
+
         footer {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
@@ -563,7 +584,15 @@
                     <a href="https://github.com/JacktheRanger/Epic-Video-Finder">GitHub</a>
                     <a href="https://github.com/JacktheRanger/Epic-Video-Finder/issues">Report Issue</a>
                     <a href="https://buymeacoffee.com/jackji">Buy me a coffee</a>
-                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top</a>
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                        class="back-to-top-btn">
+                        <span>Back to Top</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" style="margin-left: 6px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
