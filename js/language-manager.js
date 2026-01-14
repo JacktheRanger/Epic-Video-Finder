@@ -62,7 +62,7 @@ class LanguageManager {
     updateToggleButton() {
         const toggleBtn = document.getElementById('lang-toggle');
         if (toggleBtn) {
-            toggleBtn.textContent = this.currentLang === 'en' ? 'EN' : 'CN';
+            toggleBtn.textContent = this.currentLang === 'en' ? 'EN' : '中文';
             toggleBtn.title = this.currentLang === 'en' ? 'Current: English' : 'Current: Chinese';
         }
     }

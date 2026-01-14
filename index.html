@@ -310,6 +310,7 @@
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            align-items: start;
         }
 
         .gallery-item {
@@ -570,16 +571,12 @@
     <section>
         <div class="container">
             <h2 data-i18n="gallery.title">See it in action</h2>
-            <div class="gallery-grid">
+            <div id="readme-gallery" class="gallery-grid">
+                <!-- Images will be auto-loaded from README.md -->
                 <div class="gallery-item">
                     <img src="https://github.com/user-attachments/assets/146e6473-9b9d-4f97-99fc-2fa1b2eb8b45"
-                        alt="Dark Mode Interface">
+                        alt="Loading...">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://github.com/user-attachments/assets/f3c239b6-d542-4ff8-bf4a-a83bdffa6095"
-                        alt="Duplicate Finder">
-                </div>
-
             </div>
         </div>
     </section>
@@ -617,6 +614,7 @@
     <script src="js/version-check.js"></script>
     <script src="js/split-text.js"></script>
     <script src="js/gradient-text.js"></script>
+    <script src="js/readme-images.js"></script>
     <div id="custom-cursor"></div>
 
     <script>
