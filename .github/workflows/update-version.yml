@@ -1,0 +1,65 @@
+name: Update Version Badge
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to set (e.g., V3.6.1)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Get version from release or input
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            VERSION="${{ github.event.release.tag_name }}"
+          else
+            VERSION="${{ github.event.inputs.version }}"
+          fi
+          # Ensure version starts with uppercase V
+          if [[ "$VERSION" == v* ]]; then
+            VERSION="V${VERSION:1}"
+          elif [[ "$VERSION" != V* ]]; then
+            VERSION="V$VERSION"
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Version: $VERSION"
+      
+      - name: Update version in index.html
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          # Update English version badge
+          sed -i "s/V[0-9]\+\.[0-9]\+\.[0-9]\+ Available Now/${VERSION} Available Now/g" index.html
+          # Update Chinese version badge  
+          sed -i "s/V[0-9]\+\.[0-9]\+\.[0-9]\+ 现已发布/${VERSION} 现已发布/g" index.html
+          echo "Updated index.html with version: $VERSION"
+      
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet index.html; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add index.html
+          git commit -m "🏷️ Update version badge to ${{ steps.version.outputs.version }}"
+          git push
