@@ -1,6 +1,9 @@
 class LanguageManager {
     constructor() {
-        this.currentLang = localStorage.getItem('epic_video_finder_lang') || 'en';
+        // Priority: saved preference > browser language > default 'en'
+        const savedLang = localStorage.getItem('epic_video_finder_lang');
+        const browserLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+        this.currentLang = savedLang || browserLang;
         this.init();
     }
 
