@@ -7,6 +7,9 @@ on:
       - 'README.md'
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   sync-images:
     runs-on: ubuntu-latest
