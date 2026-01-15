@@ -1,3 +1,32 @@
+# Block specific AI training bots
+User-agent: Bytespider
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+# Allow all other bots
 User-agent: *
 Allow: /
 
