@@ -15,31 +15,29 @@ const ROOT_DIR = path.join(__dirname, '..');
 const README_PATH = path.join(ROOT_DIR, 'README.md');
 const INDEX_PATH = path.join(ROOT_DIR, 'index.html');
 
+// Regex to find GitHub user-attachments image URLs
+const IMAGE_REGEX = /https:\/\/github\.com\/user-attachments\/assets\/[a-f0-9-]+/gi;
+
 /**
- * Extract image URLs from README content using HTML comment markers
- * Supports: <!-- hero-en -->, <!-- hero-zh -->, <!-- gallery-N-en -->, <!-- gallery-N-zh -->
+ * Extract image URLs from README content by language section
  */
 function extractImages(readmeContent) {
-    // Match hero images
-    const heroEnMatch = readmeContent.match(/<!--\s*hero-en\s*-->\s*<img[^>]+src="([^"]+)"/i);
-    const heroZhMatch = readmeContent.match(/<!--\s*hero-zh\s*-->\s*<img[^>]+src="([^"]+)"/i);
+    // Split by Chinese section marker
+    const chineseSectionIndex = readmeContent.indexOf('## 中文');
 
-    // Match all gallery images dynamically (supports any number: gallery-1, gallery-2, gallery-3, etc.)
-    const galleryEnRegex = /<!--\s*gallery-(\d+)-en\s*-->\s*<img[^>]+src="([^"]+)"/gi;
-    const galleryZhRegex = /<!--\s*gallery-(\d+)-zh\s*-->\s*<img[^>]+src="([^"]+)"/gi;
+    let englishSection = readmeContent;
+    let chineseSection = '';
 
-    const galleryEn = [...readmeContent.matchAll(galleryEnRegex)]
-        .sort((a, b) => parseInt(a[1]) - parseInt(b[1]))  // Sort by gallery number
-        .map(m => m[2]);  // Extract URL
+    if (chineseSectionIndex !== -1) {
+        englishSection = readmeContent.substring(0, chineseSectionIndex);
+        chineseSection = readmeContent.substring(chineseSectionIndex);
+    }
 
-    const galleryZh = [...readmeContent.matchAll(galleryZhRegex)]
-        .sort((a, b) => parseInt(a[1]) - parseInt(b[1]))
-        .map(m => m[2]);
+    // Extract unique images from each section
+    const englishImages = [...new Set(englishSection.match(IMAGE_REGEX) || [])];
+    const chineseImages = [...new Set(chineseSection.match(IMAGE_REGEX) || [])];
 
-    return {
-        en: heroEnMatch ? [heroEnMatch[1], ...galleryEn] : galleryEn,
-        zh: heroZhMatch ? [heroZhMatch[1], ...galleryZh] : galleryZh
-    };
+    return { en: englishImages, zh: chineseImages };
 }
 
 /**
