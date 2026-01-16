@@ -10,6 +10,8 @@
  *   <!-- gallery-N-en --> - Gallery image N (English)
  *   <!-- gallery-N-zh --> - Gallery image N (Chinese)
  * 
+ * Strict mode: Images only appear for their marked language.
+ * 
  * Run: node scripts/sync-readme-images.js
  */
 
@@ -27,16 +29,15 @@ const INDEX_PATH = path.join(ROOT_DIR, 'index.html');
 function extractImages(readmeContent) {
     const images = {
         hero: { en: null, zh: null },
-        gallery: []  // Array of { en: url, zh: url }
+        gallery: []  // Array of { en: url|null, zh: url|null }
     };
 
     // Pattern to match: <!-- marker --> followed by <img ... src="url" ... />
-    // Handles optional whitespace and newlines between comment and img tag
     const markerPattern = /<!--\s*(hero|gallery-(\d+))-(en|zh)\s*-->\s*<img[^>]+src="([^"]+)"/gi;
 
     let match;
     while ((match = markerPattern.exec(readmeContent)) !== null) {
-        const type = match[1];      // "hero" or "gallery-N"
+        const type = match[1];       // "hero" or "gallery-N"
         const galleryNum = match[2]; // N (only for gallery), undefined for hero
         const lang = match[3];       // "en" or "zh"
         const url = match[4];        // The image URL
@@ -44,7 +45,6 @@ function extractImages(readmeContent) {
         if (type === 'hero') {
             images.hero[lang] = url;
         } else {
-            // gallery-N (1-indexed in marker, convert to 0-indexed array)
             const index = parseInt(galleryNum) - 1;
             if (!images.gallery[index]) {
                 images.gallery[index] = { en: null, zh: null };
@@ -53,7 +53,7 @@ function extractImages(readmeContent) {
         }
     }
 
-    // Filter out any undefined gallery entries (in case of gaps like gallery-1, gallery-3)
+    // Filter out undefined entries
     images.gallery = images.gallery.filter(item => item !== undefined);
 
     return images;
@@ -67,7 +67,7 @@ function updateIndexHtml(indexContent, images) {
     let changes = [];
 
     // Update Hero image
-    if (images.hero.en) {
+    if (images.hero.en || images.hero.zh) {
         const heroRegex = /<img([^>]*class="app-screenshot[^"]*"[^>]*)>/;
         const heroMatch = updated.match(heroRegex);
 
@@ -75,22 +75,22 @@ function updateIndexHtml(indexContent, images) {
             const oldTag = heroMatch[0];
             let newTag = oldTag;
 
-            // Update src with English image (default)
-            newTag = newTag.replace(/src="[^"]*"/, `src="${images.hero.en}"`);
+            // Use EN as default src, or ZH if EN not available
+            const defaultSrc = images.hero.en || images.hero.zh;
+            newTag = newTag.replace(/src="[^"]*"/, `src="${defaultSrc}"`);
 
-            // Add or update data-img-en
+            // Set data-img-en (empty string if not available)
             if (newTag.includes('data-img-en=')) {
-                newTag = newTag.replace(/data-img-en="[^"]*"/, `data-img-en="${images.hero.en}"`);
+                newTag = newTag.replace(/data-img-en="[^"]*"/, `data-img-en="${images.hero.en || ''}"`);
             } else {
-                newTag = newTag.replace(/>$/, ` data-img-en="${images.hero.en}">`);
+                newTag = newTag.replace(/>$/, ` data-img-en="${images.hero.en || ''}">`);
             }
 
-            // Add or update data-img-zh
-            const zhHeroImg = images.hero.zh || images.hero.en;
+            // Set data-img-zh (empty string if not available)
             if (newTag.includes('data-img-zh=')) {
-                newTag = newTag.replace(/data-img-zh="[^"]*"/, `data-img-zh="${zhHeroImg}"`);
+                newTag = newTag.replace(/data-img-zh="[^"]*"/, `data-img-zh="${images.hero.zh || ''}"`);
             } else {
-                newTag = newTag.replace(/>$/, ` data-img-zh="${zhHeroImg}">`);
+                newTag = newTag.replace(/>$/, ` data-img-zh="${images.hero.zh || ''}">`);
             }
 
             if (oldTag !== newTag) {
@@ -102,20 +102,23 @@ function updateIndexHtml(indexContent, images) {
 
     // Update Gallery images
     if (images.gallery.length > 0) {
-        // Build gallery HTML
         let galleryHtml = '\n';
         images.gallery.forEach((item, index) => {
-            const enUrl = item.en || item.zh;  // Fallback to zh if en missing
-            const zhUrl = item.zh || item.en;  // Fallback to en if zh missing
-            if (enUrl) {
-                galleryHtml += `                <div class="gallery-item">
-                    <img src="${enUrl}" alt="Screenshot ${index + 1}" data-img-en="${enUrl}" data-img-zh="${zhUrl}">
+            // Determine visibility: only show for languages that have this image
+            const hasEn = !!item.en;
+            const hasZh = !!item.zh;
+
+            // Use available URL for src (prefer EN)
+            const srcUrl = item.en || item.zh;
+
+            if (srcUrl) {
+                galleryHtml += `                <div class="gallery-item" data-visible-en="${hasEn}" data-visible-zh="${hasZh}">
+                    <img src="${srcUrl}" alt="Screenshot ${index + 1}" data-img-en="${item.en || ''}" data-img-zh="${item.zh || ''}">
                 </div>\n`;
             }
         });
         galleryHtml += '            ';
 
-        // Replace gallery content
         const galleryReplaced = updated.replace(
             /<div id="readme-gallery"([^>]*class="gallery-grid"[^>]*)>[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
             `<div id="readme-gallery"$1>${galleryHtml}</div>
@@ -138,27 +141,27 @@ function updateIndexHtml(indexContent, images) {
 function main() {
     console.log('🔄 Syncing README images to index.html...\n');
 
-    // Read files
     const readmeContent = fs.readFileSync(README_PATH, 'utf8');
     const indexContent = fs.readFileSync(INDEX_PATH, 'utf8');
 
-    // Extract images
     const images = extractImages(readmeContent);
 
     console.log('📸 Found images:');
     console.log(`   Hero EN: ${images.hero.en ? '✓' : '✗'}`);
     console.log(`   Hero ZH: ${images.hero.zh ? '✓' : '✗'}`);
-    console.log(`   Gallery: ${images.gallery.length} image pairs\n`);
+    console.log(`   Gallery: ${images.gallery.length} items`);
+    images.gallery.forEach((item, i) => {
+        const enStatus = item.en ? '✓' : '✗';
+        const zhStatus = item.zh ? '✓' : '✗';
+        console.log(`     [${i + 1}] EN:${enStatus} ZH:${zhStatus}`);
+    });
+    console.log('');
 
-    if (!images.hero.en && images.gallery.length === 0) {
+    if (!images.hero.en && !images.hero.zh && images.gallery.length === 0) {
         console.log('⚠️  No marked images found in README.');
-        console.log('   Make sure to use markers like:');
-        console.log('   <!-- hero-en -->');
-        console.log('   <!-- gallery-1-en -->');
         process.exit(0);
     }
 
-    // Update index.html
     const { content: newContent, changes } = updateIndexHtml(indexContent, images);
 
     if (changes.length === 0) {
@@ -166,20 +169,10 @@ function main() {
         process.exit(0);
     }
 
-    // Write updated content
     fs.writeFileSync(INDEX_PATH, newContent, 'utf8');
 
     console.log('✅ Updated index.html:');
     changes.forEach(change => console.log(`   - ${change}`));
-
-    // Output image URLs for verification
-    console.log('\n📷 Image URLs:');
-    console.log('   Hero EN:', images.hero.en || '(not set)');
-    console.log('   Hero ZH:', images.hero.zh || '(using EN)');
-    images.gallery.forEach((item, i) => {
-        console.log(`   Gallery ${i + 1} EN:`, item.en || '(not set)');
-        console.log(`   Gallery ${i + 1} ZH:`, item.zh || '(using EN)');
-    });
 }
 
 main();

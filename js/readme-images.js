@@ -4,6 +4,8 @@
  * Switches images between English and Chinese versions based on current language.
  * Image URLs are pre-populated in HTML via data-img-en and data-img-zh attributes.
  * These attributes are auto-updated by GitHub Actions when README.md changes.
+ * 
+ * Gallery items can be language-specific using data-visible-en and data-visible-zh.
  */
 
 (function () {
@@ -25,9 +27,16 @@
         const enSrc = img.dataset.imgEn;
         const zhSrc = img.dataset.imgZh;
 
-        if (!enSrc) return; // No data attributes, skip
+        // Determine target source based on language
+        // If current language src is empty, fallback to other language
+        let targetSrc;
+        if (lang === 'zh') {
+            targetSrc = zhSrc || enSrc;
+        } else {
+            targetSrc = enSrc || zhSrc;
+        }
 
-        const targetSrc = lang === 'zh' ? (zhSrc || enSrc) : enSrc;
+        if (!targetSrc) return; // No source available
 
         if (img.src !== targetSrc) {
             // Fade transition for hero image
@@ -44,29 +53,59 @@
     }
 
     /**
+     * Updates gallery item visibility based on current language
+     */
+    function updateGalleryVisibility() {
+        const lang = getCurrentLanguage();
+        const gallery = document.getElementById(GALLERY_CONTAINER_ID);
+
+        if (!gallery) return;
+
+        gallery.querySelectorAll('.gallery-item').forEach(item => {
+            const visibleEn = item.dataset.visibleEn;
+            const visibleZh = item.dataset.visibleZh;
+
+            // If visibility attributes exist, use them
+            if (visibleEn !== undefined || visibleZh !== undefined) {
+                const isVisibleForLang = lang === 'zh'
+                    ? visibleZh === 'true'
+                    : visibleEn === 'true';
+
+                item.style.display = isVisibleForLang ? '' : 'none';
+            }
+            // If no visibility attributes, always show (backward compatible)
+        });
+    }
+
+    /**
      * Updates all images with data attributes
      */
     function updateAllImages() {
+        const lang = getCurrentLanguage();
+
         // Update hero image
         const heroImg = document.querySelector(`.${HERO_IMAGE_CLASS}`);
         if (heroImg) {
             updateImageForLanguage(heroImg);
         }
 
+        // Update gallery visibility first
+        updateGalleryVisibility();
+
         // Update gallery images
         const gallery = document.getElementById(GALLERY_CONTAINER_ID);
         if (gallery) {
-            gallery.querySelectorAll('img[data-img-en]').forEach(updateImageForLanguage);
+            gallery.querySelectorAll('img[data-img-en], img[data-img-zh]').forEach(updateImageForLanguage);
         }
 
-        console.log(`Images updated for ${getCurrentLanguage().toUpperCase()} language`);
+        console.log(`Images updated for ${lang.toUpperCase()} language`);
     }
 
     /**
      * Initialize
      */
     function init() {
-        // Update images on page load (in case language was previously set)
+        // Update images on page load
         updateAllImages();
 
         // Listen for language changes
