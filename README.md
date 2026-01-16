@@ -14,12 +14,14 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
-<img width="2213" height="1861" alt="image" src="https://github.com/user-attachments/assets/8b692e3d-c09e-40fb-921e-df93e9f205a5" />
+<!-- hero-en -->
+<img width="2216" height="1863" alt="image" src="https://github.com/user-attachments/assets/c60c56b7-cbf8-445c-8c0d-7f587e84db73" />
 
-<img width="2206" height="1859" alt="image" src="https://github.com/user-attachments/assets/26e0a774-da2c-485b-9d53-506784998091" />
+<!-- gallery-1-en -->
+<img width="2212" height="1858" alt="image" src="https://github.com/user-attachments/assets/cc6a7f1b-406b-46bb-a535-e8b9fdb62209" />
 
-<img width="2205" height="1296" alt="image" src="https://github.com/user-attachments/assets/20c692ea-98d2-4fcb-be3d-4a27416b47e0" />
-
+<!-- gallery-2-en -->
+<img width="2203" height="1318" alt="image" src="https://github.com/user-attachments/assets/f7a559e9-443d-4659-b2ed-e0d0d329de76" />
 
 
 
@@ -73,6 +75,14 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 - Turn off **Remember my settings** if you don't want the app to persist settings between launches.
 - Use **Clear Cache** to reset saved settings (items are sent to the Recycle Bin).
 
+### 📋 Supported Formats
+
+| Priority | Others |
+|----------|--------|
+| `.mp4` `.mov` `.mkv` | `.wmv` `.flv` `.webm` |
+| `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
+| `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
+
 
 ### 📄 License
 GNU AGPL-3.0
@@ -92,12 +102,14 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 > ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
 
-<img width="2205" height="1856" alt="image" src="https://github.com/user-attachments/assets/4e764acd-727a-4257-946e-214b8de7378a" />
+<!-- hero-zh -->
+<img width="2210" height="1861" alt="image" src="https://github.com/user-attachments/assets/4c07c249-2f54-4a2e-98c2-218daeec5331" />
 
-<img width="2199" height="1860" alt="image" src="https://github.com/user-attachments/assets/940cedc1-834b-46f2-a4d9-edac6907cb06" />
+<!-- gallery-1-zh -->
+<img width="2208" height="1864" alt="image" src="https://github.com/user-attachments/assets/b6a42b68-468b-4b91-a522-fd12470eaf26" />
 
-<img width="2195" height="1315" alt="image" src="https://github.com/user-attachments/assets/fca0726f-322f-49fb-b120-a5023030d3c2" />
-
+<!-- gallery-2-zh -->
+<img width="2201" height="1316" alt="image" src="https://github.com/user-attachments/assets/48cabba9-851d-4911-923a-5dc2b34efc22" />
 
 
 
@@ -156,12 +168,19 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 - 关闭 **记住我的设置** 后，应用将不会在下次启动时保留设置。
 - 使用 **清除缓存** 可重置已保存的设置（文件会发送到回收站）。
 
+### 📋 支持格式
+
+| 常用格式 | 其他格式 |
+|----------|--------|
+| `.mp4` `.mov` `.mkv` | `.wmv` `.flv` `.webm` |
+| `.ts` `.mts` `.m2ts` | `.m4v` `.mpg` `.mpeg` |
+| `.avi` | `.3gp` `.f4v` `.vob` `.rmvb` `.rm` |
 
 ### 📄 许可证
 GNU AGPL-3.0
 
 ### 👤 作者
-Jack Ji &nbsp;&nbsp; [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jackji)
+Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jackji)
 
 
 
@@ -173,12 +192,6 @@ Jack Ji &nbsp;&nbsp; [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%2
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
-
-
-
-
-
-
 
 
 
