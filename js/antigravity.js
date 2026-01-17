@@ -358,12 +358,4 @@
     // Secondary trigger: click (useful if user clicks without moving first)
     window.addEventListener('click', startOnInteraction, { once: true });
 
-    // Fallback trigger: auto-start after 2 seconds if no interaction
-    // This ensures animation shows even if user doesn't move mouse immediately
-    setTimeout(() => {
-        if (!initialized) {
-            startOnInteraction();
-        }
-    }, 2000);
-
 })();
