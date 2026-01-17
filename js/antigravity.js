@@ -42,13 +42,42 @@
     const clock = new THREE.Clock();
 
     function init() {
-        // Check if mobile device - disable animation on mobile for better UX
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-            || ('ontouchstart' in window)
-            || (navigator.maxTouchPoints > 0);
+        // Precise device detection to distinguish:
+        // - Touch-screen laptops (should ENABLE animation) 
+        // - True mobile devices like phones/tablets (should DISABLE animation)
+        //
+        // Key insight: Use (pointer: fine) + (hover: hover) to detect mouse/trackpad presence
+        // Touch-screen laptops have BOTH: fine pointer (trackpad) AND touch capability
+        // Phones/tablets have ONLY: coarse pointer (touch) without hover capability
 
-        if (isMobile) {
-            // Hide the container on mobile
+        // Check if device has a fine pointer (mouse/trackpad) with hover capability
+        const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+        const canHover = window.matchMedia('(hover: hover)').matches;
+
+        // Check if the primary input is touch-only (no mouse/trackpad)
+        const isTouchPrimaryDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+        // Check for mobile User Agent as supplementary signal
+        const hasMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        // Decision logic:
+        // 1. If device has fine pointer AND can hover → ENABLE (includes touch-screen laptops)
+        // 2. If device is touch-primary OR has mobile UA → DISABLE
+        // 3. Default: ENABLE (give benefit of the doubt)
+
+        let shouldDisable = false;
+
+        if (hasFinePointer && canHover) {
+            // Device has mouse/trackpad → Enable animation
+            // This correctly handles touch-screen laptops
+            shouldDisable = false;
+        } else if (isTouchPrimaryDevice || hasMobileUA) {
+            // True mobile device (touch-only input or mobile browser)
+            shouldDisable = true;
+        }
+
+        if (shouldDisable) {
+            // Hide the container on true mobile devices
             const mobileContainer = document.getElementById('antigravity-container');
             if (mobileContainer) {
                 mobileContainer.style.display = 'none';
@@ -309,14 +338,32 @@
         renderer.render(scene, camera);
     }
 
-    // Start
-    // Start - Defer until first mouse move
+    // Start - Multiple triggers for reliability
+    let initialized = false;
+
     function startOnInteraction() {
+        if (initialized) return; // Prevent double initialization
+        initialized = true;
+
+        // Clean up all event listeners
         window.removeEventListener('mousemove', startOnInteraction);
+        window.removeEventListener('click', startOnInteraction);
+
         init();
     }
 
-    // Wait for first mouse move to initialize
-    window.addEventListener('mousemove', startOnInteraction);
+    // Primary trigger: mouse move (most common on desktop)
+    window.addEventListener('mousemove', startOnInteraction, { once: true });
+
+    // Secondary trigger: click (useful if user clicks without moving first)
+    window.addEventListener('click', startOnInteraction, { once: true });
+
+    // Fallback trigger: auto-start after 2 seconds if no interaction
+    // This ensures animation shows even if user doesn't move mouse immediately
+    setTimeout(() => {
+        if (!initialized) {
+            startOnInteraction();
+        }
+    }, 2000);
 
 })();

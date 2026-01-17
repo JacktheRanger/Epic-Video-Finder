@@ -430,10 +430,17 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        /* Hide Antigravity animation on mobile/touch devices */
-        @media (max-width: 1024px),
-        (hover: none),
-        (pointer: coarse) {
+        /* Hide Antigravity animation ONLY on true mobile devices
+           Conditions must ALL be met:
+           - Small screen (max-width: 768px) 
+           - No hover capability (touch-primary device)
+           - Coarse pointer (touch input)
+           
+           Touch-screen laptops will NOT match because they have:
+           - (hover: hover) - trackpad/mouse can hover
+           - (pointer: fine) - trackpad/mouse is fine pointer
+        */
+        @media (max-width: 768px) and (hover: none) and (pointer: coarse) {
             #antigravity-container {
                 display: none !important;
             }
@@ -510,10 +517,10 @@
             </div>
 
             <div class="app-showcase">
-                <img src="https://github.com/user-attachments/assets/80ab164c-54d5-435b-8386-294f7c18e60e"
+                <img src="https://github.com/user-attachments/assets/c60c56b7-cbf8-445c-8c0d-7f587e84db73"
                     alt="Epic Video Finder Interface" class="app-screenshot floating"
-                    data-img-en="https://github.com/user-attachments/assets/80ab164c-54d5-435b-8386-294f7c18e60e"
-                    data-img-zh="https://github.com/user-attachments/assets/8e4dc68a-1395-457c-85cf-1bf2e588658d">
+                    data-img-en="https://github.com/user-attachments/assets/c60c56b7-cbf8-445c-8c0d-7f587e84db73"
+                    data-img-zh="https://github.com/user-attachments/assets/4c07c249-2f54-4a2e-98c2-218daeec5331">
             </div>
 
             <!-- Antigravity Animation Container removed from here -->
@@ -589,11 +596,17 @@
         <div class="container">
             <h2 data-i18n="gallery.title">See it in action</h2>
             <div id="readme-gallery" class="gallery-grid">
-                <div class="gallery-item" data-visible-en="true" data-visible-zh="true">
-                    <img src="https://github.com/user-attachments/assets/8df7026b-95eb-4fd9-b42c-9d4e4278cc24" alt="Screenshot 1" data-img-en="https://github.com/user-attachments/assets/8df7026b-95eb-4fd9-b42c-9d4e4278cc24" data-img-zh="https://github.com/user-attachments/assets/81a90969-2247-43cd-bb88-b0642567f01a">
+                <div class="gallery-item">
+                    <img src="https://github.com/user-attachments/assets/cc6a7f1b-406b-46bb-a535-e8b9fdb62209"
+                        alt="Screenshot 1"
+                        data-img-en="https://github.com/user-attachments/assets/cc6a7f1b-406b-46bb-a535-e8b9fdb62209"
+                        data-img-zh="https://github.com/user-attachments/assets/b6a42b68-468b-4b91-a522-fd12470eaf26">
                 </div>
-                <div class="gallery-item" data-visible-en="true" data-visible-zh="true">
-                    <img src="https://github.com/user-attachments/assets/befd7008-ab4c-43ee-8e64-2b3ed02d1d06" alt="Screenshot 2" data-img-en="https://github.com/user-attachments/assets/befd7008-ab4c-43ee-8e64-2b3ed02d1d06" data-img-zh="https://github.com/user-attachments/assets/59118beb-24cd-4b6b-8ca0-25cdbed22719">
+                <div class="gallery-item">
+                    <img src="https://github.com/user-attachments/assets/f7a559e9-443d-4659-b2ed-e0d0d329de76"
+                        alt="Screenshot 2"
+                        data-img-en="https://github.com/user-attachments/assets/f7a559e9-443d-4659-b2ed-e0d0d329de76"
+                        data-img-zh="https://github.com/user-attachments/assets/48cabba9-851d-4911-923a-5dc2b34efc22">
                 </div>
             </div>
         </div>
