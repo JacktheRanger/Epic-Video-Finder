@@ -15,13 +15,15 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
 <!-- hero-en -->
-<img width="2207" height="1844" alt="image" src="https://github.com/user-attachments/assets/71ed727d-6c6f-4a7a-97e4-2912976eb9d2" />
+<img width="2206" height="1843" alt="image" src="https://github.com/user-attachments/assets/4cebab0a-9f71-48af-b086-0c81b0b59f60" />
+
 
 <!-- gallery-1-en -->
-<img width="2201" height="1896" alt="image" src="https://github.com/user-attachments/assets/cd41d083-3171-4da1-bbc3-960a4f6c3e9d" />
+<img width="2206" height="1840" alt="image" src="https://github.com/user-attachments/assets/edbc58f6-834a-4bae-b697-3f90fd6f9106" />
 
 <!-- gallery-2-en -->
-<img width="2210" height="1975" alt="image" src="https://github.com/user-attachments/assets/c4d0e496-c07f-4dee-bc77-2faeb9c9cd21" />
+<img width="2202" height="1841" alt="image" src="https://github.com/user-attachments/assets/c13e779d-f000-4cca-ba7d-a6ee6b20bb5a" />
+
 
 
 
@@ -100,15 +102,18 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 > ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
 
 <!-- hero-zh -->
-<img width="2209" height="1969" alt="image" src="https://github.com/user-attachments/assets/00171143-0c42-4c4d-8c27-106fa5512e01" />
+<img width="2208" height="1842" alt="image" src="https://github.com/user-attachments/assets/1dcf6c12-2a6c-423d-a8ee-93d20914e8b4" />
+
 
 
 <!-- gallery-1-zh -->
-<img width="2201" height="1900" alt="image" src="https://github.com/user-attachments/assets/54717055-ef8c-4e33-b061-9b3bbba687e0" />
+<img width="2211" height="1839" alt="image" src="https://github.com/user-attachments/assets/67ece1d6-1197-44ab-81e9-46a3c69b6ad4" />
+
 
 
 <!-- gallery-2-zh -->
-<img width="2204" height="1974" alt="image" src="https://github.com/user-attachments/assets/fce53c29-f99d-4a41-b82f-3b744fc1d38d" />
+<img width="2205" height="1843" alt="image" src="https://github.com/user-attachments/assets/621f5b3b-dac0-492d-bfd2-1655de45a5e8" />
+
 
 
 
@@ -190,6 +195,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
