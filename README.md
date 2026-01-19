@@ -52,7 +52,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 - **🚀 High Performance**: Isolate-based background scanning keeps UI responsive; virtualized lists handle large file collections.
 - **🗂️ Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
 - **📌 Always on Top**: Keep the window above other apps while reviewing results.
-- **🗑️ Safe Deletion**: Deletes are sent to the **Recycle Bin** (including duplicate deletion and cache clearing).
+- **�️ 100% Offline**: Runs entirely on your local machine. No internet required. Deletions go to the **Recycle Bin**.
 - **⚙️ Settings & Cache**: Remember theme/language/formats/window state, display cache size, and clear cache to reset.
 - **🌍 Bilingual**: One-click toggle between **English** and **Chinese** interface.
 - **💾 Export**: Save your scan results to a text file for reporting.
@@ -60,6 +60,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 ### 🔧 System Requirements
 
 - **OS**: Windows 10/11 (64-bit)
+- **Flutter SDK**: 3.27+ (Only if building from source)
 
 ### 🚀 How to Use
 
@@ -102,7 +103,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 > 🚀 **V4.0.0+**: 从 Python/Flet 完全重写为 **Flutter/Dart**，带来 10 倍更快的启动速度、100 倍更快的大文件扫描与重复检测、原生 Windows 性能、更流畅的动画和更灵敏的 UI 响应。
 
-> ⭐ **如果喜欢这个项目，请给我一个 Star！** 谢谢~
+> ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
 
 <!-- hero-zh -->
 <img width="2208" height="1842" alt="image" src="https://github.com/user-attachments/assets/1dcf6c12-2a6c-423d-a8ee-93d20914e8b4" />
@@ -149,7 +150,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 - **🚀 高性能**: 基于 Isolate 的后台扫描保持 UI 流畅；虚拟化列表轻松处理大量文件。
 - **🗂️ 快捷操作**: 在结果列表中可直接 **打开视频**、**打开所在文件夹**、或 **删除文件**。
 - **📌 窗口置顶**: 需要时可开启置顶，方便边查看结果边操作其它窗口。
-- **🗑️ 安全删除**: 删除操作会发送到 **回收站**（包含重复删除与清缓存）。
+- **�️ 100% 本地运行**: 完全在本地运行，无需联网。删除操作会发送到 **回收站**。
 - **⚙️ 设置与缓存**: 记住主题/语言/格式/窗口状态，显示缓存大小，并可一键清除缓存重置。
 - **🌍 双语支持**: 界面内置中/英文一键切换。
 - **💾 结果导出**: 支持将扫描到的文件列表和统计信息导出为文本文件。
@@ -157,6 +158,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ### 🔧 环境要求
 
 - **系统**: Windows 10/11 (64位)
+- **Flutter SDK**: 3.27+ (仅从源码构建需要)
 
 ### 🚀 如何使用
 
@@ -197,8 +199,6 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
-
-
 
 
 
