@@ -60,7 +60,6 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 ### 🔧 System Requirements
 
 - **OS**: Windows 10/11 (64-bit)
-- **Flutter SDK**: 3.27+ (Only if building from source)
 
 ### 🚀 How to Use
 
@@ -103,7 +102,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 > 🚀 **V4.0.0+**: 从 Python/Flet 完全重写为 **Flutter/Dart**，带来 10 倍更快的启动速度、100 倍更快的大文件扫描与重复检测、原生 Windows 性能、更流畅的动画和更灵敏的 UI 响应。
 
-> ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
+> ⭐ **如果喜欢这个项目，请给我一个 Star！** 谢谢~
 
 <!-- hero-zh -->
 <img width="2208" height="1842" alt="image" src="https://github.com/user-attachments/assets/1dcf6c12-2a6c-423d-a8ee-93d20914e8b4" />
@@ -158,7 +157,6 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ### 🔧 环境要求
 
 - **系统**: Windows 10/11 (64位)
-- **Flutter SDK**: 3.27+ (仅从源码构建需要)
 
 ### 🚀 如何使用
 
@@ -199,6 +197,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
