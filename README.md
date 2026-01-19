@@ -10,7 +10,9 @@
 
 ## English
 
-A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. Now featuring a stunning bright and dark-themed GUI built with Flet and rock-solid file handling via Tkinter. Quickly find, organize, analyze, and deduplicate video files in any directory.
+A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. Featuring a stunning Material Design 3 interface built with **Flutter**, delivering native Windows performance with smooth animations. Quickly find, organize, analyze, and deduplicate video files in any directory.
+
+> 🚀 **V4.0.0+**: Completely rewritten from Python/Flet to **Flutter/Dart**, delivering 10x faster startup, 100x faster large file scanning & duplicate detection, native Windows performance, smoother animations, and a more responsive UI.
 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
@@ -38,8 +40,8 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 ### ✨ Features
 
-- **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design aesthetics.
-- **📁 Native Dialogs**: Uses Windows native directory and file pickers (via Tkinter) for 100% reliability.
+- **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design 3 aesthetics and smooth animations.
+- **📁 Native Windows App**: Built with Flutter for fast startup and responsive UI, with native file pickers.
 - **🔄 Deep Scanning**: Recursively finds 20+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
 - **📊 Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
 - **🔍 Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
@@ -47,7 +49,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
   - **Balance Mode**: Accurate detection using SHA-256 hash verification.
 - **☑️ Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
 - **🧩 Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
-- **⏱️ Include Duration (Optional)**: Toggle **Include Duration** to show video length (uses Windows Shell metadata; will slow down scanning).
+- **🚀 High Performance**: Isolate-based background scanning keeps UI responsive; virtualized lists handle large file collections.
 - **🗂️ Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
 - **📌 Always on Top**: Keep the window above other apps while reviewing results.
 - **🗑️ Safe Deletion**: Deletes are sent to the **Recycle Bin** (including duplicate deletion and cache clearing).
@@ -58,7 +60,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 ### 🔧 System Requirements
 
 - **OS**: Windows 10/11 (64-bit)
-- **Python**: 3.7+ (Only if running from source)
+- **Flutter SDK**: 3.27+ (Only if building from source)
 
 ### 🚀 How to Use
 
@@ -78,7 +80,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 ### ⚙️ Settings & Cache
 
-- Settings and cache are stored under `%APPDATA%\EpicVideoScanner` (e.g. `settings.json`).
+- Settings and cache are stored under `%APPDATA%\EpicVideoFinderCache` (e.g. `settings.json`).
 - Turn off **Remember my settings** if you don't want the app to persist settings between launches.
 - Use **Clear Cache** to reset saved settings (items are sent to the Recycle Bin).
 
@@ -97,7 +99,9 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 # 🔍 史诗级视频扫描 & 重复文件检测器
 
-一款现代、美观且功能强大的SOTA视频**文件**与**重复检测工具**。新版本采用Flet构建了精美的亮色与暗色主题图形界面，并结合Tkinter实现原生系统的文件交互。
+一款现代、美观且功能强大的SOTA视频**文件**与**重复检测工具**。采用 **Flutter** 构建，具有精美的 Material Design 3 界面，提供原生 Windows 性能与流畅动画。快速查找、整理、分析和去重任意目录中的视频文件。
+
+> 🚀 **V4.0.0+**: 从 Python/Flet 完全重写为 **Flutter/Dart**，带来 10 倍更快的启动速度、100 倍更快的大文件扫描与重复检测、原生 Windows 性能、更流畅的动画和更灵敏的 UI 响应。
 
 > ⭐ **如果觉得这个项目有用，请给我一个 Star！** 谢谢~
 
@@ -134,8 +138,8 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 ### ✨ 主要功能 
 
-- **🎨 现代化界面**: 极具质感的色彩主题与 Material Design 设计。
-- **📁 原生体验**: 集成 Windows 原生文件/目录选择框 (Tkinter 引擎)，稳定可靠。
+- **🎨 现代化界面**: 极具质感的 Material Design 3 设计与流畅动画。
+- **📁 原生体验**: 基于 Flutter 构建，启动快速、UI 响应灵敏，支持原生文件选择框。
 - **🔄 深度扫描**: 递归查找子目录中 20+ 种常见及罕见的视频格式。
 - **📊 可视化统计**: 实时扫描进度条，扫描结果格式分布柱状图，显示文件大小。
 - **🔍 重复文件检测**: 识别并管理重复的视频文件，提供两种检测模式：
@@ -143,7 +147,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
   - **均衡模式**: 使用 SHA-256 哈希校验精准检测。
 - **☑️ 灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
 - **🧩 自定义格式**: 支持输入你自己的扩展名（逗号分隔，例如 `.mxf, .m2v`），并可通过勾选框启用/禁用。
-- **⏱️ 包含视频长度（可选）**: 开启 **包含视频长度** 后会显示视频时长（使用 Windows Shell 元数据；会降低扫描速度）。
+- **🚀 高性能**: 基于 Isolate 的后台扫描保持 UI 流畅；虚拟化列表轻松处理大量文件。
 - **🗂️ 快捷操作**: 在结果列表中可直接 **打开视频**、**打开所在文件夹**、或 **删除文件**。
 - **📌 窗口置顶**: 需要时可开启置顶，方便边查看结果边操作其它窗口。
 - **🗑️ 安全删除**: 删除操作会发送到 **回收站**（包含重复删除与清缓存）。
@@ -154,7 +158,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ### 🔧 环境要求
 
 - **系统**: Windows 10/11 (64位)
-- **Python**: 3.7+ (仅源码运行需要)
+- **Flutter SDK**: 3.27+ (仅从源码构建需要)
 
 ### 🚀 如何使用
 
@@ -174,7 +178,7 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 ### ⚙️ 设置与缓存
 
-- 设置与缓存位于 `%APPDATA%\EpicVideoScanner`（例如 `settings.json`）。
+- 设置与缓存位于 `%APPDATA%\EpicVideoFinderCache`（例如 `settings.json`）。
 - 关闭 **记住我的设置** 后，应用将不会在下次启动时保留设置。
 - 使用 **清除缓存** 可重置已保存的设置（文件会发送到回收站）。
 
