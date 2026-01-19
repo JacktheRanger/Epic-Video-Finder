@@ -17,8 +17,7 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
 <!-- hero-en -->
-<img width="2206" height="1843" alt="image" src="https://github.com/user-attachments/assets/4cebab0a-9f71-48af-b086-0c81b0b59f60" />
-
+<img width="2206" height="1841" alt="image" src="https://github.com/user-attachments/assets/387e739f-e839-4455-b7da-2f7fc10c1c36" />
 
 <!-- gallery-1-en -->
 <img width="2206" height="1840" alt="image" src="https://github.com/user-attachments/assets/edbc58f6-834a-4bae-b697-3f90fd6f9106" />
@@ -105,14 +104,10 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 > ⭐ **如果喜欢这个项目，请给我一个 Star！** 谢谢~
 
 <!-- hero-zh -->
-<img width="2208" height="1842" alt="image" src="https://github.com/user-attachments/assets/1dcf6c12-2a6c-423d-a8ee-93d20914e8b4" />
-
-
+<img width="2204" height="1839" alt="image" src="https://github.com/user-attachments/assets/c70e509f-88e4-4dc9-a03d-0eef2ef94f14" />
 
 <!-- gallery-1-zh -->
 <img width="2211" height="1839" alt="image" src="https://github.com/user-attachments/assets/67ece1d6-1197-44ab-81e9-46a3c69b6ad4" />
-
-
 
 <!-- gallery-2-zh -->
 <img width="2205" height="1843" alt="image" src="https://github.com/user-attachments/assets/621f5b3b-dac0-492d-bfd2-1655de45a5e8" />
@@ -197,6 +192,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
