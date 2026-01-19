@@ -60,7 +60,6 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 ### 🔧 System Requirements
 
 - **OS**: Windows 10/11 (64-bit)
-- **Flutter SDK**: 3.27+ (Only if building from source)
 
 ### 🚀 How to Use
 
@@ -158,7 +157,6 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ### 🔧 环境要求
 
 - **系统**: Windows 10/11 (64位)
-- **Flutter SDK**: 3.27+ (仅从源码构建需要)
 
 ### 🚀 如何使用
 
@@ -199,6 +197,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
