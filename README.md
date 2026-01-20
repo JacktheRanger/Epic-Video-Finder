@@ -39,22 +39,22 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 ### ✨ Features
 
-- **🎨 Modern GUI**: Beautiful light/dark-themed interface with Material Design 3 aesthetics and smooth animations.
-- **📁 Native Windows App**: Built with Flutter for fast startup and responsive UI, with native file pickers.
-- **🔄 Deep Scanning**: Recursively finds 20+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
-- **📊 Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
-- **🔍 Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
+- ** Modern GUI**: Beautiful light/dark-themed interface with Material Design 3 aesthetics and smooth animations.
+- ** Native Windows App**: Built with Flutter for fast startup and responsive UI, with native file pickers.
+- ** Deep Scanning**: Recursively finds 20+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
+- ** Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
+- ** Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
   - **Very Fast Mode**: Instant detection by file size comparison.
   - **Balance Mode**: Accurate detection using SHA-256 hash verification.
-- **☑️ Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
-- **🧩 Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
-- **🚀 High Performance**: Isolate-based background scanning keeps UI responsive; virtualized lists handle large file collections.
-- **🗂️ Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
-- **📌 Always on Top**: Keep the window above other apps while reviewing results.
-- **�️ 100% Offline**: Runs entirely on your local machine. No internet required. Deletions go to the **Recycle Bin**.
-- **⚙️ Settings & Cache**: Remember theme/language/formats/window state, display cache size, and clear cache to reset.
-- **🌍 Bilingual**: One-click toggle between **English** and **Chinese** interface.
-- **💾 Export**: Save your scan results to a text file for reporting.
+- ** Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
+- ** Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
+- ** High Performance**: Isolate-based background scanning keeps UI responsive; virtualized lists handle large file collections.
+- ** Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
+- ** Always on Top**: Keep the window above other apps while reviewing results.
+- ** 100% Offline**: Runs entirely on your local machine. No internet required. Deletions go to the **Recycle Bin**.
+- ** Settings & Cache**: Remember theme/language/formats/window state, display cache size, and clear cache to reset.
+- ** Bilingual**: One-click toggle between **English** and **Chinese** interface.
+- ** Export**: Save your scan results to a text file for reporting.
 
 ### 🔧 System Requirements
 
@@ -173,6 +173,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
