@@ -63,18 +63,8 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 ### 🚀 How to Use
 
 1. Go to [Releases](https://github.com/JacktheRanger/Epic-Video-Finder/releases)
-2. Download `Vx.x.x.Epic.Video.Finder.exe`
+2. Download `Vx.x.x.Epic.Video.Finder.zip`
 3. Double-click to run. No installation required.
-
-### 📖 Usage
-
-1. **Select Directory**: Click "Browse" to choose the folder you want to scan.
-2. **Choose Formats**: Check/Uncheck video formats you want to include (or use "Select All"). Optionally add **Custom formats** (comma separated).
-3. **(Optional) Include Duration**: Turn on **Include Duration** if you want to display video length in results.
-4. **Start Scan**: Click the big search button. The app will scan in the background with real-time progress.
-5. **View & Manage Results**: See counts/sizes, format distribution, and use the action buttons to **open**, **open folder**, or **delete** (Recycle Bin). Toggle **Always on Top** if needed.
-6. **Detect Duplicates**: Choose a mode, run detection, then delete selected duplicates (Recycle Bin).
-7. **Save**: Click "Save Results" to export the list to a `.txt` file.
 
 ### ⚙️ Settings & Cache
 
@@ -156,18 +146,9 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 ### 🚀 如何使用
 
 1. 前往 [Releases](https://github.com/JacktheRanger/Epic-Video-Finder/releases) 页面。
-2. 下载 `Vx.x.x.Epic.Video.Finder.exe`。
+2. 下载 `Vx.x.x.Epic.Video.Finder.zip`。
 3. 双击直接运行，无需安装任何环境。
 
-### 📖 使用说明
-
-1. **选择目录**: 点击 "浏览 (Browse)" 按钮选择要扫描的文件夹。
-2. **格式筛选**: 勾选你想要查找的视频格式（支持快捷全选/反选），并可选填 **自定义格式**（逗号分隔）。
-3. **（可选）包含视频长度**: 如需在结果中显示时长，请开启 **包含视频长度**。
-4. **开始扫描**: 点击搜索图标按钮，扫描将在后台即时进行，实时显示进度。
-5. **查看与管理结果**: 查看统计信息，并使用按钮 **打开** / **打开文件夹** / **删除**（回收站）。需要时可开启 **窗口置顶**。
-6. **检测重复**: 选择模式后开始检测，并删除选中的重复文件（回收站）。
-7. **保存结果**: 点击 "保存结果 (Save Results)" 将列表导出为 `.txt` 文件。
 
 ### ⚙️ 设置与缓存
 
@@ -192,6 +173,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
