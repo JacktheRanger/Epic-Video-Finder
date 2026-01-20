@@ -39,22 +39,22 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 
 ### ✨ Features
 
-- ** Modern GUI**: Beautiful light/dark-themed interface with Material Design 3 aesthetics and smooth animations.
-- ** Native Windows App**: Built with Flutter for fast startup and responsive UI, with native file pickers.
-- ** Deep Scanning**: Recursively finds 20+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
-- ** Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
-- ** Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
+- **Modern GUI**: Beautiful light/dark-themed interface with Material Design 3 aesthetics and smooth animations.
+- **Native Windows App**: Built with Flutter for fast startup and responsive UI, with native file pickers.
+- **Deep Scanning**: Recursively finds 20+ video formats (`mp4`, `mkv`, `mov`, `avi`, etc.) in all subfolders.
+- **Visual Statistics**: Real-time progress bar and scanning result bar charts with file size display.
+- **Duplicate Detection**: Identify and manage duplicate video files with two detection modes:
   - **Very Fast Mode**: Instant detection by file size comparison.
   - **Balance Mode**: Accurate detection using SHA-256 hash verification.
-- ** Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
-- ** Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
-- ** High Performance**: Isolate-based background scanning keeps UI responsive; virtualized lists handle large file collections.
-- ** Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
-- ** Always on Top**: Keep the window above other apps while reviewing results.
-- ** 100% Offline**: Runs entirely on your local machine. No internet required. Deletions go to the **Recycle Bin**.
-- ** Settings & Cache**: Remember theme/language/formats/window state, display cache size, and clear cache to reset.
-- ** Bilingual**: One-click toggle between **English** and **Chinese** interface.
-- ** Export**: Save your scan results to a text file for reporting.
+- **Smart Selection**: Detailed checkboxes to select/deselect specific formats to scan.
+- **Custom Formats**: Add your own extensions (comma separated, e.g. `.mxf, .m2v`) and optionally disable them with a checkbox.
+- **High Performance**: Isolate-based background scanning keeps UI responsive; virtualized lists handle large file collections.
+- **Quick Actions**: Open video, open containing folder, or delete files directly from the results list.
+- **Always on Top**: Keep the window above other apps while reviewing results.
+- **100% Offline**: Runs entirely on your local machine. No internet required. Deletions go to the **Recycle Bin**.
+- **Settings & Cache**: Remember theme/language/formats/window state, display cache size, and clear cache to reset.
+- **Bilingual**: One-click toggle between **English** and **Chinese** interface.
+- **Export**: Save your scan results to a text file for reporting.
 
 ### 🔧 System Requirements
 
@@ -122,22 +122,22 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 
 ### ✨ 主要功能 
 
-- **🎨 现代化界面**: 极具质感的 Material Design 3 设计与流畅动画。
-- **📁 原生体验**: 基于 Flutter 构建，启动快速、UI 响应灵敏，支持原生文件选择框。
-- **🔄 深度扫描**: 递归查找子目录中 20+ 种常见及罕见的视频格式。
-- **📊 可视化统计**: 实时扫描进度条，扫描结果格式分布柱状图，显示文件大小。
-- **🔍 重复文件检测**: 识别并管理重复的视频文件，提供两种检测模式：
+- **现代化界面**: 极具质感的 Material Design 3 设计与流畅动画。
+- **原生体验**: 基于 Flutter 构建，启动快速、UI 响应灵敏，支持原生文件选择框。
+- **深度扫描**: 递归查找子目录中 20+ 种常见及罕见的视频格式。
+- **可视化统计**: 实时扫描进度条，扫描结果格式分布柱状图，显示文件大小。
+- **重复文件检测**: 识别并管理重复的视频文件，提供两种检测模式：
   - **极速模式**: 通过文件大小瞬间对比检测。
   - **均衡模式**: 使用 SHA-256 哈希校验精准检测。
-- **☑️ 灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
-- **🧩 自定义格式**: 支持输入你自己的扩展名（逗号分隔，例如 `.mxf, .m2v`），并可通过勾选框启用/禁用。
-- **🚀 高性能**: 基于 Isolate 的后台扫描保持 UI 流畅；虚拟化列表轻松处理大量文件。
-- **🗂️ 快捷操作**: 在结果列表中可直接 **打开视频**、**打开所在文件夹**、或 **删除文件**。
-- **📌 窗口置顶**: 需要时可开启置顶，方便边查看结果边操作其它窗口。
-- **�️ 100% 本地运行**: 完全在本地运行，无需联网。删除操作会发送到 **回收站**。
-- **⚙️ 设置与缓存**: 记住主题/语言/格式/窗口状态，显示缓存大小，并可一键清除缓存重置。
-- **🌍 双语支持**: 界面内置中/英文一键切换。
-- **💾 结果导出**: 支持将扫描到的文件列表和统计信息导出为文本文件。
+- **灵活筛选**: 支持全选/反选，或单独勾选需要查找的特定视频格式。
+- **自定义格式**: 支持输入你自己的扩展名（逗号分隔，例如 `.mxf, .m2v`），并可通过勾选框启用/禁用。
+- **高性能**: 基于 Isolate 的后台扫描保持 UI 流畅；虚拟化列表轻松处理大量文件。
+- **快捷操作**: 在结果列表中可直接 **打开视频**、**打开所在文件夹**、或 **删除文件**。
+- **窗口置顶**: 需要时可开启置顶，方便边查看结果边操作其它窗口。
+- **100% 本地运行**: 完全在本地运行，无需联网。删除操作会发送到 **回收站**。
+- **设置与缓存**: 记住主题/语言/格式/窗口状态，显示缓存大小，并可一键清除缓存重置。
+- **双语支持**: 界面内置中/英文一键切换。
+- **结果导出**: 支持将扫描到的文件列表和统计信息导出为文本文件。
 
 ### 🔧 环境要求
 
@@ -173,6 +173,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
