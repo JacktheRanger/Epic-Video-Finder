@@ -17,14 +17,16 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 > ⭐ **If you find this project useful, please consider giving it a Star!** Your support helps keep the project alive and motivates further development.
 
 <!-- hero-en -->
-<img width="2206" height="1841" alt="image" src="https://github.com/user-attachments/assets/387e739f-e839-4455-b7da-2f7fc10c1c36" />
+<img width="2441" height="1842" alt="image" src="https://github.com/user-attachments/assets/72cacd00-9110-4fee-8660-6cb80b4c929d" />
 
 <!-- gallery-1-en -->
-<img width="2206" height="1840" alt="image" src="https://github.com/user-attachments/assets/edbc58f6-834a-4bae-b697-3f90fd6f9106" />
+<img width="2438" height="1842" alt="image" src="https://github.com/user-attachments/assets/4b94bf0e-b237-4e46-a435-43adcb72e553" />
 
 <!-- gallery-2-en -->
-<img width="2202" height="1841" alt="image" src="https://github.com/user-attachments/assets/c13e779d-f000-4cca-ba7d-a6ee6b20bb5a" />
+<img width="2441" height="1844" alt="image" src="https://github.com/user-attachments/assets/c08453a3-907c-41e3-a339-af63503cae59" />
 
+<!-- gallery-3-en -->
+<img width="2431" height="1731" alt="image" src="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" />
 
 
 
@@ -96,14 +98,16 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 > ⭐ **如果喜欢这个项目，请给我一个 Star！** 谢谢~
 
 <!-- hero-zh -->
-<img width="2204" height="1839" alt="image" src="https://github.com/user-attachments/assets/c70e509f-88e4-4dc9-a03d-0eef2ef94f14" />
+<img width="2447" height="1836" alt="image" src="https://github.com/user-attachments/assets/b853016b-9f0f-431e-b769-6c11ffed8871" />
 
 <!-- gallery-1-zh -->
-<img width="2211" height="1839" alt="image" src="https://github.com/user-attachments/assets/67ece1d6-1197-44ab-81e9-46a3c69b6ad4" />
+<img width="2445" height="1841" alt="image" src="https://github.com/user-attachments/assets/5bca9991-7c35-40a0-848e-b1a4f0a9caac" />
 
 <!-- gallery-2-zh -->
-<img width="2205" height="1843" alt="image" src="https://github.com/user-attachments/assets/621f5b3b-dac0-492d-bfd2-1655de45a5e8" />
+<img width="2439" height="1840" alt="image" src="https://github.com/user-attachments/assets/df1e806b-ac7e-47ab-9d51-2009390ddb28" />
 
+<!-- gallery-3-zh -->
+<img width="2437" height="1729" alt="image" src="https://github.com/user-attachments/assets/46485922-45d0-4d78-99b0-995057cab7ef" />
 
 
 
@@ -177,6 +181,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
