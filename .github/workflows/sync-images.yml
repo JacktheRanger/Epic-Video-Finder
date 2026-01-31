@@ -44,4 +44,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add index.html
           git commit -m "🖼️ Auto-sync README images to index.html"
+          git pull --rebase
           git push
