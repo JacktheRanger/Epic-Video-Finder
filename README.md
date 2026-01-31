@@ -28,8 +28,6 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 <!-- gallery-3-en -->
 <img width="2431" height="1731" alt="image" src="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" />
 
-<!-- gallery-4-en -->
-<img width="2431" height="1731" alt="image" src="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" />
 
 
 
@@ -181,6 +179,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
