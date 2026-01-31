@@ -47,13 +47,20 @@ jobs:
           git add -A
           git diff --staged --quiet || (git commit -m "🔄 Auto-sync content [skip ci]" && git pull --rebase && git push)
 
+      - name: Prepare deployment folder
+        run: |
+          mkdir -p _site
+          cp -r index.html js LOGO robots.txt sitemap.xml .nojekyll _site/
+          cp -r docs _site/ 2>/dev/null || true
+          cp -r releases _site/ 2>/dev/null || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
