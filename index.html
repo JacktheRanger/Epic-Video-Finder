@@ -466,6 +466,151 @@
         .split-char.space {
             width: 0.3em;
         }
+
+        /* Changelog Timeline */
+        .changelog {
+            padding: 6rem 0;
+        }
+
+        .changelog-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 40px;
+        }
+
+        .changelog-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-left: 20px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -32px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+            z-index: 1;
+        }
+
+        .timeline-item.major .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            box-shadow: 0 0 0 4px var(--secondary), 0 0 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1.25rem 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-content {
+            transform: translateX(5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .timeline-item.major .timeline-content {
+            border-left: 3px solid var(--secondary);
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(255, 255, 255, 0.8) 100%);
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .version-number {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .version-tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .version-tag.major {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+        }
+
+        .version-tag.feature {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .version-title {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .version-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .changelog-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .changelog-timeline {
+                padding-left: 30px;
+            }
+
+            .changelog-timeline::before {
+                left: 10px;
+            }
+
+            .timeline-dot {
+                left: -27px;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -517,10 +662,10 @@
             </div>
 
             <div class="app-showcase">
-                <img src="https://github.com/user-attachments/assets/e2fca70e-a58e-48c4-a895-2e417b9f0c95"
+                <img src="https://github.com/user-attachments/assets/72cacd00-9110-4fee-8660-6cb80b4c929d"
                     alt="Epic Video Finder Interface" class="app-screenshot floating"
-                    data-img-en="https://github.com/user-attachments/assets/e2fca70e-a58e-48c4-a895-2e417b9f0c95"
-                    data-img-zh="https://github.com/user-attachments/assets/6048866c-4e44-4d03-8e63-743fb5e74ae9">
+                    data-img-en="https://github.com/user-attachments/assets/72cacd00-9110-4fee-8660-6cb80b4c929d"
+                    data-img-zh="https://github.com/user-attachments/assets/b853016b-9f0f-431e-b769-6c11ffed8871">
             </div>
 
             <!-- Antigravity Animation Container removed from here -->
@@ -594,14 +739,292 @@
             <h2 data-i18n="gallery.title">See it in action</h2>
             <div id="readme-gallery" class="gallery-grid">
                 <div class="gallery-item" data-visible-en="true" data-visible-zh="true">
-                    <img src="https://github.com/user-attachments/assets/75fb8846-3eab-4bbf-ae8e-227ee94ef6eb" alt="Screenshot 1" data-img-en="https://github.com/user-attachments/assets/75fb8846-3eab-4bbf-ae8e-227ee94ef6eb" data-img-zh="https://github.com/user-attachments/assets/78d1eaaf-09d9-432f-9ed6-bacddf35ce2f">
+                    <img src="https://github.com/user-attachments/assets/4b94bf0e-b237-4e46-a435-43adcb72e553" alt="Screenshot 1" data-img-en="https://github.com/user-attachments/assets/4b94bf0e-b237-4e46-a435-43adcb72e553" data-img-zh="https://github.com/user-attachments/assets/5bca9991-7c35-40a0-848e-b1a4f0a9caac">
                 </div>
                 <div class="gallery-item" data-visible-en="true" data-visible-zh="true">
-                    <img src="https://github.com/user-attachments/assets/41afe0b5-cded-4f03-a2e2-2c7dc0ede2c9" alt="Screenshot 2" data-img-en="https://github.com/user-attachments/assets/41afe0b5-cded-4f03-a2e2-2c7dc0ede2c9" data-img-zh="https://github.com/user-attachments/assets/7f7d3bab-9696-4ea8-b41d-997877d8dc5b">
+                    <img src="https://github.com/user-attachments/assets/c08453a3-907c-41e3-a339-af63503cae59" alt="Screenshot 2" data-img-en="https://github.com/user-attachments/assets/c08453a3-907c-41e3-a339-af63503cae59" data-img-zh="https://github.com/user-attachments/assets/df1e806b-ac7e-47ab-9d51-2009390ddb28">
                 </div>
                 <div class="gallery-item" data-visible-en="true" data-visible-zh="true">
-                    <img src="https://github.com/user-attachments/assets/cb130398-0955-419c-beae-ddade1be51df" alt="Screenshot 3" data-img-en="https://github.com/user-attachments/assets/cb130398-0955-419c-beae-ddade1be51df" data-img-zh="https://github.com/user-attachments/assets/6c47f4c2-829b-4cca-9b5c-6d0353d51616">
+                    <img src="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" alt="Screenshot 3" data-img-en="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" data-img-zh="https://github.com/user-attachments/assets/46485922-45d0-4d78-99b0-995057cab7ef">
                 </div>
+                <div class="gallery-item" data-visible-en="true" data-visible-zh="false">
+                    <img src="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" alt="Screenshot 4" data-img-en="https://github.com/user-attachments/assets/bfb233d1-fe80-49f0-9a2e-d38a6c9c894a" data-img-zh="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Section -->
+    <section class="changelog">
+        <div class="container">
+            <h2 data-i18n="changelog.title">Changelog</h2>
+            <div class="changelog-timeline">
+                <!-- V5.1.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V5.1.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v5_1_0.title">Audio Settings Tooltips</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v5_1_0.desc">Added hover tooltips for audio match settings with help icons</p>
+                    </div>
+                </div>
+
+                <!-- V5.0.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V5.0.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v5_0_0.title">Audio Duplicate Detection</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v5_0_0.desc">Audio fingerprint-based duplicate detection using Chromaprint/fpcalc</p>
+                    </div>
+                </div>
+
+                <!-- V4.0.7 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V4.0.7</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v4_0_7.title">Save Results Dialog</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v4_0_7.desc">Added save dialog for results with customizable filenames</p>
+                    </div>
+                </div>
+
+                <!-- V4.0.5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V4.0.5</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v4_0_5.title">JSON Settings Storage</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v4_0_5.desc">Settings storage migrated to JSON file with Recycle Bin integration</p>
+                    </div>
+                </div>
+
+                <!-- V4.0.4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V4.0.4</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v4_0_4.title">Custom Video Formats</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v4_0_4.desc">Custom video format input field with toggle functionality</p>
+                    </div>
+                </div>
+
+                <!-- V4.0.3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V4.0.3</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v4_0_3.title">File Management</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v4_0_3.desc">File delete button, auto-selection feature, scan time display</p>
+                    </div>
+                </div>
+
+                <!-- V4.0.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V4.0.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v4_0_0.title">Flutter Rewrite</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v4_0_0.desc">Complete rewrite from Python/Flet to Flutter/Dart with Material Design 3</p>
+                    </div>
+                </div>
+
+                <!-- V3.10.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.10.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v3_10_0.title">Three-Level Navigation</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_10_0.desc">Completely redesigned navigation with three dedicated views</p>
+                    </div>
+                </div>
+
+                <!-- V3.9.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.9.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v3_9_0.title">Performance Optimization</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_9_0.desc">16x fewer read calls with optimized hash block size</p>
+                    </div>
+                </div>
+
+                <!-- V3.6.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.6.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v3_6_0.title">Manual Path Input</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_6_0.desc">Manual directory path input with offline-first launch</p>
+                    </div>
+                </div>
+
+                <!-- V3.5.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.5.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v3_5_0.title">Save Duplicates to TXT</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_5_0.desc">Export duplicate results to timestamped TXT files</p>
+                    </div>
+                </div>
+
+                <!-- V3.4.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.4.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v3_4_0.title">Video Duration Display</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_4_0.desc">Video files display duration using Windows Shell properties</p>
+                    </div>
+                </div>
+
+                <!-- V3.3.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.3.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v3_3_0.title">Cache Management</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_3_0.desc">Real-time cache size display with one-click clearing</p>
+                    </div>
+                </div>
+
+                <!-- V3.0.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V3.0.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v3_0_0.title">Duplicate Detection</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v3_0_0.desc">Two detection modes: Very Fast (size-based) and Balance (SHA-256 hash)</p>
+                    </div>
+                </div>
+
+                <!-- V2.3.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V2.3.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v2_3_0.title">Settings Persistence</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v2_3_0.desc">Persistent settings storage via local JSON file</p>
+                    </div>
+                </div>
+
+                <!-- V2.2.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V2.2.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v2_2_0.title">Theme System Overhaul</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v2_2_0.desc">New light theme with sky blue accents and centralized color system</p>
+                    </div>
+                </div>
+
+                <!-- V2.1.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V2.1.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v2_1_0.title">Custom Format Input</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v2_1_0.desc">Custom format input field with thread-safe UI updates</p>
+                    </div>
+                </div>
+
+                <!-- V2.0.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V2.0.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v2_0_0.title">GUI Migration</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v2_0_0.desc">Complete GUI rebuild using Flet framework with Material Design</p>
+                    </div>
+                </div>
+
+                <!-- V1.1.0 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V1.1.0</span>
+                            <span class="version-tag feature">Feature</span>
+                            <span class="version-title" data-i18n="changelog.v1_1_0.title">Bilingual Support</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v1_1_0.desc">Added English and Chinese language support</p>
+                    </div>
+                </div>
+
+                <!-- V1.0.0 -->
+                <div class="timeline-item major">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="version-number">V1.0.0</span>
+                            <span class="version-tag major">Major</span>
+                            <span class="version-title" data-i18n="changelog.v1_0_0.title">Initial Release</span>
+                        </div>
+                        <p class="version-desc" data-i18n="changelog.v1_0_0.desc">First version with video scanning capabilities</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="changelog-cta">
+                <a href="https://github.com/JacktheRanger/Epic-Video-Finder/releases" class="btn btn-secondary"
+                    target="_blank" rel="noopener noreferrer" data-i18n="changelog.view_all">
+                    View All Releases
+                </a>
             </div>
         </div>
     </section>
