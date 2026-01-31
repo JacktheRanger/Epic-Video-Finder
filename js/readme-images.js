@@ -61,7 +61,13 @@
 
         if (!gallery) return;
 
-        gallery.querySelectorAll('.gallery-item').forEach(item => {
+        const items = gallery.querySelectorAll('.gallery-item');
+        const visibleItems = [];
+
+        items.forEach(item => {
+            // Remove center-last class first
+            item.classList.remove('center-last');
+
             const visibleEn = item.dataset.visibleEn;
             const visibleZh = item.dataset.visibleZh;
 
@@ -72,9 +78,19 @@
                     : visibleEn === 'true';
 
                 item.style.display = isVisibleForLang ? '' : 'none';
+                if (isVisibleForLang) {
+                    visibleItems.push(item);
+                }
+            } else {
+                // If no visibility attributes, always show (backward compatible)
+                visibleItems.push(item);
             }
-            // If no visibility attributes, always show (backward compatible)
         });
+
+        // Center the last item if odd number of visible items
+        if (visibleItems.length % 2 === 1 && visibleItems.length > 0) {
+            visibleItems[visibleItems.length - 1].classList.add('center-last');
+        }
     }
 
     /**
