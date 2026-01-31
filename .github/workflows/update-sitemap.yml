@@ -8,6 +8,10 @@ on:
       - '.github/**'
       - 'sitemap.xml'
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
@@ -27,4 +31,4 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git diff --quiet sitemap.xml || (git add sitemap.xml && git commit -m "Auto-update sitemap lastmod date" && git push)
+          git diff --quiet sitemap.xml || (git add sitemap.xml && git commit -m "Auto-update sitemap lastmod date" && git pull --rebase && git push)

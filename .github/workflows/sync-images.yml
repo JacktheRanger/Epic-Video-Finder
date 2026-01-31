@@ -7,6 +7,10 @@ on:
       - 'README.md'
   workflow_dispatch:  # Allow manual trigger
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
