@@ -23,11 +23,13 @@ A modern, beautiful, and powerful SOTA video **file** and **duplicate finder**. 
 <!-- gallery-1-en -->
 <img width="2318" height="1842" alt="image" src="https://github.com/user-attachments/assets/75fb8846-3eab-4bbf-ae8e-227ee94ef6eb" />
 
-
 <!-- gallery-2-en -->
 <img width="2319" height="1775" alt="image" src="https://github.com/user-attachments/assets/41afe0b5-cded-4f03-a2e2-2c7dc0ede2c9" />
 
 <!-- gallery-3-en -->
+<img width="2325" height="1781" alt="image" src="https://github.com/user-attachments/assets/9cb87c76-f4ef-48ec-8b36-f8d4ac3d57d0" />
+
+<!-- gallery-4-en -->
 <img width="2313" height="1733" alt="image" src="https://github.com/user-attachments/assets/cb130398-0955-419c-beae-ddade1be51df" />
 
 
@@ -109,6 +111,9 @@ Jack Ji &nbsp;&nbsp;  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%
 <img width="2315" height="1768" alt="image" src="https://github.com/user-attachments/assets/7f7d3bab-9696-4ea8-b41d-997877d8dc5b" />
 
 <!-- gallery-3-zh -->
+<img width="2322" height="1772" alt="image" src="https://github.com/user-attachments/assets/450775cc-478a-4e4b-80e1-f3c70a2ecc96" />
+
+<!-- gallery-4-zh -->
 <img width="2316" height="1723" alt="image" src="https://github.com/user-attachments/assets/6c47f4c2-829b-4cca-9b5c-6d0353d51616" />
 
 
@@ -184,6 +189,7 @@ Jack Ji &nbsp;&nbsp;   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me
 ---
 
 <p align="center"><a href="#top">Back to Top</a></p>
+
 
 
 
