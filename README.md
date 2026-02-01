@@ -2,7 +2,11 @@
 <a id="top"></a>
 <img align="right" src="https://img.shields.io/github/downloads/JacktheRanger/Epic-Video-Finder/total.svg?label=Downloads" alt="Downloads" />
 
+<<<<<<< Updated upstream
 **Language**: [English](#english) | [中文](#中文) 
+=======
+**Language**: [English](#english) | [中文](#中文)     
+>>>>>>> Stashed changes
 
 **Homepage**: [https://epic-video-finder.pages.dev](https://epic-video-finder.pages.dev)
 
